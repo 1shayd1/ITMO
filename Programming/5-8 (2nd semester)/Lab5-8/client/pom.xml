@@ -52,7 +52,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.6.2</version>
                 <configuration>
-                    <mainClass>org.Gh0st1yAnge1.ClientApp</mainClass>
+                    <mainClass>org.shayd1.ClientApp</mainClass>
                 </configuration>
             </plugin>
 
@@ -61,7 +61,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>org.Gh0st1yAnge1.gui.Launcher</mainClass>
+                    <mainClass>org.shayd1.gui.Launcher</mainClass>
                 </configuration>
             </plugin>
         </plugins>

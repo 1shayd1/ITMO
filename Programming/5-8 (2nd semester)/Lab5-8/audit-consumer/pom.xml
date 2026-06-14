@@ -57,7 +57,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.6.2</version>
                 <configuration>
-                    <mainClass>org.Gh0st1yAnge1.AuditConsumerApp</mainClass>
+                    <mainClass>org.shayd1.AuditConsumerApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>

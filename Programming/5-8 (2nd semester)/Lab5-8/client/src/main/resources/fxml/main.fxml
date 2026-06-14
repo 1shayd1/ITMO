@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="5.0" styleClass="main-window-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Gh0st1yAnge1.gui.controllers.MainController">
+<VBox spacing="5.0" styleClass="main-window-container" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.shayd1.gui.controllers.MainController">
 
     <stylesheets>
         <URL value="@/css/style.css" />
