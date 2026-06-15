@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="480.0" spacing="15.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Gh0st1yAnge1.gui.controllers.EditDialogController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="lblTitle" text="Route Data" />
+
+        <GridPane hgap="10.0" vgap="10.0" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="160.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+            </columnConstraints>
+
+            <children>
+                <Label fx:id="lblKey" text="Key:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="tfKey" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label fx:id="lblFromName" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label fx:id="lblCoords" text="Coordinates (X, Y):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <TextField fx:id="tfCoordX" promptText="X" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="tfCoordY" promptText="Y" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <Label fx:id="lblFrom" text="From (X, Y, Z, Name):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <HBox spacing="5.0">
+                            <children>
+                                <TextField fx:id="tfFromX" promptText="X" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="tfFromY" promptText="Y" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="tfFromZ" promptText="Z" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <TextField fx:id="tfFromName" promptText="Location Name" />
+                    </children>
+                </VBox>
+
+                <Label fx:id="lblTo" text="To (X, Y, Z, Name):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <children>
+                        <HBox spacing="5.0">
+                            <children>
+                                <TextField fx:id="tfToX" promptText="X" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="tfToY" promptText="Y" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="tfToZ" promptText="Z" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <TextField fx:id="tfToName" promptText="Location Name" />
+                    </children>
+                </VBox>
+
+                <Label fx:id="lblDistance" text="Distance:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="tfDistance" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+
+        <Label fx:id="lblError" styleClass="error-label" wrapText="true" />
+
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <children>
+                <Button fx:id="btnCancel" mnemonicParsing="false" text="Cancel" />
+                <Button fx:id="btnSave" mnemonicParsing="false" text="Save" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

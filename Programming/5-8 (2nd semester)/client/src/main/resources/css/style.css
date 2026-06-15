@@ -1,0 +1,334 @@
+/* auth */
+
+.auth-container {
+    -fx-background-color: #2d2d3a;
+}
+
+.auth-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.auth-label {
+    -fx-text-fill: #cccccc;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.auth-input-field {
+    -fx-background-color: #3d3d4a;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #888888;
+    -fx-background-radius: 4px;
+    -fx-background-insets: 0;
+    -fx-padding: 6 10 6 10;
+}
+
+.auth-input-field:hover {
+    -fx-background-color: #444454;
+}
+
+.auth-input-field:focus {
+    -fx-background-color: #00adb5, #3d3d4a;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 4px;
+}
+
+.auth-button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+    -fx-min-width: 160px;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+#btnLogin {
+    -fx-background-color: #00adb5;
+}
+#btnLogin:hover {
+    -fx-background-color: #008c92;
+}
+
+#btnRegister {
+    -fx-background-color: #6c5ce7;
+}
+#btnRegister:hover {
+    -fx-background-color: #5649c0;
+}
+
+.auth-combo-box {
+    -fx-background-color: #3d3d4a;
+    -fx-cursor: hand;
+    -fx-pref-width: 160px;
+}
+.auth-combo-box .list-cell {
+    -fx-text-fill: #888888 !important;
+}
+.auth-combo-box .arrow {
+    -fx-background-color: #888888;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #3d3d4a;
+    -fx-background-radius: 4px;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #3d3d4a;
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #00adb5;
+    -fx-text-fill: white;
+}
+
+.auth-error-message {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-weight: bold;
+}
+
+.auth-success-message {
+    -fx-text-fill: #69db7c;
+    -fx-font-weight: bold;
+}
+
+
+/* edit */
+
+.root {
+    -fx-background-color: #0b1b2b;
+}
+
+.label {
+    -fx-text-fill: #e0e5eb;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+#lblTitle {
+    -fx-text-fill: #7ec9c3;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #123b47;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #ffffff !important;
+    -fx-prompt-text-fill: #000000 !important;
+    -fx-border-color: #1f6a6f;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 10px;
+}
+
+.text-field:focus {
+    -fx-border-color: #7ec9c3;
+    -fx-background-color: #164654;
+    -fx-text-fill: #ffffff !important;
+    -fx-prompt-text-fill: #000000 !important;
+}
+
+.text-field:disabled {
+    -fx-opacity: 0.6;
+    -fx-background-color: #0b1b2b;
+    -fx-border-color: #123b47;
+    -fx-text-fill: #cccccc !important;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #1f6a6f, #123b47);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 4px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #7ec9c3, #1f6a6f);
+    -fx-text-fill: #0b1b2b;
+}
+
+#tfKey { -fx-background-color: #0d2534; -fx-text-fill: #ffffff !important; }
+#tfKey:focus { -fx-background-color: #113347; }
+
+#tfName { -fx-background-color: #0f2f3d; -fx-text-fill: #ffffff !important; }
+#tfName:focus { -fx-background-color: #143f52; }
+
+#tfCoordX { -fx-background-color: #123b47; -fx-text-fill: #ffffff !important; }
+#tfCoordX:focus { -fx-background-color: #174b5b; }
+
+#tfCoordY { -fx-background-color: #154953; -fx-text-fill: #ffffff !important; }
+#tfCoordY:focus { -fx-background-color: #1c5d6a; }
+
+#tfFromX { -fx-background-color: #195b62; -fx-text-fill: #ffffff !important; }
+#tfFromX:focus { -fx-background-color: #20727a; }
+
+#tfFromY { -fx-background-color: #1f6a6f; -fx-text-fill: #ffffff !important; }
+#tfFromY:focus { -fx-background-color: #27838a; }
+
+#tfFromZ { -fx-background-color: #2b7f82; -fx-text-fill: #ffffff !important; }
+#tfFromZ:focus { -fx-background-color: #359ca0; }
+
+#tfFromName { -fx-background-color: #3ca2a3; -fx-text-fill: #ffffff !important; }
+#tfFromName:focus { -fx-background-color: #49babc; }
+
+#tfToX { -fx-background-color: #4eb3b4; -fx-text-fill: #ffffff !important; }
+#tfToX:focus { -fx-background-color: #5ccbc3; }
+
+#tfToY { -fx-background-color: #63c4c5; -fx-text-fill: #ffffff !important; }
+#tfToY:focus { -fx-background-color: #75dcd4; }
+
+#tfToZ { -fx-background-color: #75d5d3; -fx-text-fill: #ffffff !important; }
+#tfToZ:focus { -fx-background-color: #8beee9; }
+
+#tfToName { -fx-background-color: #7ec9c3; -fx-text-fill: #0b1b2b !important; }
+#tfToName:focus { -fx-background-color: #96ded8; }
+
+#tfDistance { -fx-background-color: #96ded8; -fx-text-fill: #0b1b2b !important; }
+#tfDistance:focus { -fx-background-color: #b0f2ec; }
+
+#btnSave {
+    -fx-background-color: #1f6a6f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 6px 20px;
+    -fx-cursor: hand;
+}
+#btnSave:hover {
+    -fx-background-color: #2b7f82;
+}
+
+#btnCancel {
+    -fx-background-color: #0b1b2b;
+    -fx-text-fill: #7ec9c3;
+    -fx-border-color: #1f6a6f;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 6px 20px;
+    -fx-cursor: hand;
+}
+#btnCancel:hover {
+    -fx-background-color: #123b47;
+    -fx-text-fill: white;
+}
+
+
+/* main */
+
+.main-window-container {
+    -fx-background-color: #1a1a2e;
+}
+
+.top-toolbar {
+    -fx-background-color: #252535;
+    -fx-padding: 10px 14px;
+}
+
+.filter-toolbar {
+    -fx-padding: 8px 14px;
+}
+
+.toolbar-label {
+    -fx-text-fill: #00bcd4;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.status-label {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 11px;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.main-window-container .table-view {
+    -fx-background-color: #1e1e2e;
+    -fx-control-inner-background: #1e1e2e;
+    -fx-border-color: #2d2d3a;
+}
+
+.main-window-container .table-view .column-header-background {
+    -fx-background-color: #252535;
+}
+
+.main-window-container .table-view .column-header {
+    -fx-background-color: #252535;
+    -fx-border-color: #1a1a2e;
+    -fx-border-width: 0 1 1 0;
+}
+
+.main-window-container .table-view .column-header .label {
+    -fx-text-fill: #7ec9c3;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.menu-button, .lab-button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-radius: 6px;
+    -fx-padding: 7px 18px;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-transition: all 0.25s ease-in-out;
+}
+
+#btnAdd { -fx-background-color: #0b1b2b; }
+#btnAdd:hover { -fx-background-color: #0d243a; }
+
+#btnEdit { -fx-background-color: #0d2534; }
+#btnEdit:hover { -fx-background-color: #0f2f3d; }
+
+#btnAverageOfDistance { -fx-background-color: #0f2f3d; }
+#btnAverageOfDistance:hover { -fx-background-color: #113946; }
+
+#btnCountByDistance { -fx-background-color: #123b47; }
+#btnCountByDistance:hover { -fx-background-color: #154751; }
+
+#btnFilterLessThanDistance { -fx-background-color: #154953; }
+#btnFilterLessThanDistance:hover { -fx-background-color: #195860; }
+
+#btnInfo { -fx-background-color: #195b62; }
+#btnInfo:hover { -fx-background-color: #1d6d71; }
+
+#btnRefresh { -fx-background-color: #1f6a6f; }
+#btnRefresh:hover { -fx-background-color: #2b7d80; }
+
+#btnClear { -fx-background-color: #2b7f82; }
+#btnClear:hover { -fx-background-color: #3b9394; }
+
+#btnRemoveGreater { -fx-background-color: #3ca2a3; }
+#btnRemoveGreater:hover { -fx-background-color: #4eb2b3; }
+
+#btnRemoveGreaterKey { -fx-background-color: #4eb3b4; }
+#btnRemoveGreaterKey:hover { -fx-background-color: #62c3c4; }
+
+#btnReplaceIfLower { -fx-background-color: #63c4c5; }
+#btnReplaceIfLower:hover { -fx-background-color: #72d4d5; }
+
+#btnDelete { -fx-background-color: #75d5d3; }
+#btnDelete:hover { -fx-background-color: #7ec9c3; }
+
+#btnLogout {
+    -fx-background-color: #7ec9c3;
+    -fx-text-fill: #0b1b2b !important;
+}
+#btnLogout:hover {
+    -fx-background-color: #96ded8;
+}
+
+.main-window-container .combo-box {
+    -fx-background-color: #3d3d4a;
+    -fx-text-fill: white;
+}
+.main-window-container .combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #3d3d4a;
+}
+.main-window-container .split-pane {
+    -fx-background-color: #1a1a2e;
+}

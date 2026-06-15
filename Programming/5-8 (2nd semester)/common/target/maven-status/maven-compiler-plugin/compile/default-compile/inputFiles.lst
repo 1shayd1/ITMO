@@ -1,0 +1,10 @@
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/request_and_response/Request.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/utils/TcpUtil.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/model/Route.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/model/Location.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/request_and_response/Response.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/utils/Validator.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/AuditEvent.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/model/Coordinates.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/request_and_response/CommandType.java
+/home/shalabod/GitHub/ProgaLab5/Lab6/common/src/main/java/org/Gh0st1yAnge1/exceptions/InputCancelledException.java
