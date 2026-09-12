@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9f6fa6e0-5cdc-4ffe-8639-3e203e4baa17" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/audit-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/audit-consumer/target/audit-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/classes/org/Gh0st1yAnge1/AuditConsumerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/audit-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/surefire-reports/TEST-org.Gh0st1yAnge1.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/surefire-reports/org.Gh0st1yAnge1.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-consumer/target/test-classes/org/Gh0st1yAnge1/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/fxml/auth.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/fxml/auth.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/fxml/edit_dialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/fxml/edit_dialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/ExecuteScript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/Exit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/auth/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/auth/Logout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/auth/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/AverageOfDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/CheckInsertKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/CheckUpdateKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/CountByDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/FilterLessThanDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/Help.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/Info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/read/Show.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/Clear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/Insert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveGreater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveGreaterKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/ReplaceIfLower.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/client_commands/write/Update.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/Launcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/controllers/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/controllers/EditDialogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/controllers/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/localization/LocaleManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/localization/messages_cs.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/localization/messages_es_DO.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/localization/messages_it.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/localization/messages_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/models/RouteTableItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/network/ServerConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/visualization/CanvasRenderer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/visualization/CanvasRenderer$CircleInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/visualization/CanvasRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/gui/visualization/ColorManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/manager/ClientCommandManager$RequestSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/manager/ClientCommandManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/manager/InputManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/org/Gh0st1yAnge1/utils/RouteBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/surefire-reports/TEST-org.Gh0st1yAnge1.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/surefire-reports/org.Gh0st1yAnge1.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/test-classes/org/Gh0st1yAnge1/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/AuditEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/exceptions/InputCancelledException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/model/Coordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/model/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/model/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/request_and_response/CommandType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/request_and_response/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/request_and_response/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/utils/TcpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/org/Gh0st1yAnge1/utils/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/surefire-reports/TEST-org.Gh0st1yAnge1.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/surefire-reports/org.Gh0st1yAnge1.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/test-classes/org/Gh0st1yAnge1/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/ServerApp$ClientSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/ServerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/audit/AuditProducer$CommandPartitioner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/audit/AuditProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/HasherFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/PasswordHasher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/algorithms/Argon2Hasher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/algorithms/BCryptHasher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/algorithms/DigestHasher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/auth/algorithms/SCryptHasher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/ClientCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/auth/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/auth/Logout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/auth/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/AverageOfDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/CheckInsertKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/CheckUpdateKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/CountByDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/FilterLessThanDistance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/Help.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/Info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/read/Show.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/Clear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/Insert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveGreater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveGreaterKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/RemoveKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/ReplaceIfLower.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/client_commands/write/Update.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/config/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/db/DatabaseManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/db/RouteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/db/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/manager/CollectionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/manager/FileManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/manager/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/manager/InputManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/manager/ServerCommandExecutor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/server_commands/Exit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/server_commands/SaveWithPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/server_commands/ServerCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/server_commands/ServerHelp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/utils/IdGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/utils/LocalDateAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/org/Gh0st1yAnge1/utils/LoggerUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-org.Gh0st1yAnge1.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/org.Gh0st1yAnge1.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/test-classes/org/Gh0st1yAnge1/AppTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FAuzLcBDCOnXnYOFpHh1Gk9JgR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src/main/java/org/shayd1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="audit-consumer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f6fa6e0-5cdc-4ffe-8639-3e203e4baa17" name="Changes" comment="" />
+      <created>1781530456930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781530456930</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

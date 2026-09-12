@@ -1,0 +1,61 @@
+schedule:
+  - name: Tuesday
+    lessons:
+      - subject: Linear algebra
+        type: Lecture
+        teacher: Koltsova Tatyana Borisovna
+        place: Kronverskiy av., 49
+        room: '1506'
+        startime: '09:50'
+        endtime: '11:20'
+      - subject: Linear algebra
+        type: Practical lesson
+        teacher: Tanchenko Julia Valerievna
+        place: Kronverskiy av., 49
+        room: 2306/1
+        startime: '11:30'
+        endtime: '13:00'
+      - subject: Mathematical analysis
+        type: Lecture
+        teacher: Koltsova Tatyana Borisovna
+        place: Kronverskiy av., 49
+        room: '1506'
+        startime: '13:30'
+        endtime: '15:00'
+      - subject: Mathematical analysis
+        type: Practical lesson
+        teacher: Mitina Tatyana Evgenievna
+        place: Kronverskiy av., 49
+        room: 2306/2
+        startime: '15:30'
+        endtime: '17:00'
+      - subject: Athletics class
+        type: Sport lesson
+        teacher: Volkova Kseniya Nikolaevna
+        place: Raevskogo av., 16
+        room: V.I.Alekseev sports complex
+        startime: '19:30'
+        endtime: '20:30'
+  - name: Thursday
+    lessons:
+      - subject: History
+        type: Practical lesson
+        teacher: Bogomazov Nikolay Ivanovich
+        place: Kronverskiy av., 49
+        room: '2414'
+        startime: '09:50'
+        endtime: '11:20'
+      - subject: History
+        type: Lecture
+        teacher: Bogomazov Nikolay Ivanovich
+        place: Kronverskiy av., 49
+        room: '2337'
+        startime: '11:30'
+        endtime: '13:00'
+      - subject: Athletics class
+        type: Sport lesson
+        teacher: Volkova Kseniya Nikolaevna
+        place: Raevskogo av., 16
+        room: V.I.Alekseev sports complex
+        startime: '19:30'
+        endtime: '20:30'

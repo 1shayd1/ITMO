@@ -1,0 +1,130 @@
+%#Author = Shalabodov Yaroslav Dmitrievich
+%#Group = P3110
+%#Date =  23.11.25
+\documentclass[9pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage[a5paper,top=0.5cm,bottom=1.5cm,left=1.35cm,right=1.25cm]{geometry}
+\usepackage{amsmath,amssymb} % Математические формулы
+\usepackage{paracol} % Разбиение текста на колонки
+\usepackage{graphicx} % Для добавления иллюстраций
+\usepackage{tikz} % Для рисования фигур
+\usepackage{wrapfig} % Для текста вокруг иллюстрации
+\usetikzlibrary {angles} % Дополнительные библиотеки для tikz
+\graphicspath{{./images}}
+\columnratio{0.65,0.35} % Соотношение размеров колонок
+\setlength{\emergencystretch}{4em} % Максимальное расстояние между словами
+\usepackage{fancyhdr}
+\pagestyle{fancy} % Стиль страницы с верхним и нижним колонтитулами
+\fancyhead{} % Очистить верхний колонтитул
+\fancyfoot{} % Очистить нижний колонтитул
+\pagenumbering{arabic} % Нумерация страниц арабскими цифрами
+
+\newcommand{\sector}[4]{
+    \begin{tikzpicture}[baseline=(current bounding box.center), scale=0.6]
+        \fill[#1] (0,0) -- (-90+20:1cm) arc (-90+20:-90-20:1cm) -- cycle;
+        \node[label=above:\tiny${#2}$] at (0,0);
+        \node[label=below:\tiny${#3}$] at (-90+30:1cm);
+        \node[label=below:\tiny${#4}$] at (-90-30:1cm);
+    \end{tikzpicture}
+}
+
+\newcommand{\myline}[4]{
+        \begin{tikzpicture}
+            \draw[#1, #2] (0,0) -- (1,0);
+            \node[above, font=\tiny] at (0,0) {$#3$};
+            \node[above, font=\tiny] at (1,0) {$#4$};
+        \end{tikzpicture}
+}
+
+\vspace*{0.35em}
+\begin{document}
+    \begin{paracol}{2}
+        \begin{minipage}[t]{\linewidth}
+            \begin{column}
+                \noindent\centeringКНИГА I ПРЕДЛ. XXV. ТЕОРЕМА\hfill\text{49}\\
+            \end{column}
+        \end{minipage}
+    
+        \begin{column}
+        \end{column}
+    \end{paracol}
+
+    \begin{paracol}{2}
+        \begin{column}
+            \noindent\begin{minipage}[t][6em]{\linewidth}
+                \begin{wrapfigure}{l}{0.2\linewidth}
+                    \includegraphics[width=1.7cm]{images/pretty-e.png}
+                    \vspace{-2.75em}
+                \end{wrapfigure}
+                \textit{\\ сли у двух треугольников две стороны
+                \myline{blue}{ultra thick}{A}{B}
+                и
+                \myline{red}{ultra thick}{C}{A}
+                соответственно равны двум сторонам
+                \myline{blue}{}{D}{E}
+                и
+                \myline{red}{}{F}{D}
+                другого, но основания неравны, то угол над большим основанием
+                \myline{black}{ultra thick}{B}{C}
+                одного треугольника меньше угла под меньшим
+                \myline{yellow}{}{E}{F}
+                другого.    
+                }
+            \end{minipage}
+            \vspace{2em}
+            \begin{center}
+                \[\sector{yellow}{A}{B}{C}\text{=, > или <}\sector{black}{D}{E}{F}\]
+                \vspace{-1em}
+                \[\sector{yellow}{A}{B}{C}\text{не равен}\sector{black}{D}{E}{F},\]
+                \vspace{-1em}
+                \[\text{поскольку если} \sector{yellow}{A}{B}{C}\text{=}\sector{black}{D}{E}{F}\text{то,}\]
+                \myline{black}{ultra thick}{C}{B}
+                = 
+                \myline{yellow}{}{F}{E}(пр. I.4),\\
+                что противоречит гипотезе;
+                \vspace{-1em}
+                \[\sector{yellow}{A}{B}{C}\text{не меньше}\sector{black}{D}{E}{F},\]
+                \vspace{-1em}
+                \[\text{поскольку если}\sector{yellow}{A}{B}{C}<\sector{black}{D}{E}{F},\]
+                то 
+                \myline{black}{ultra thick}{C}{B}
+                <
+                \myline{yellow}{}{F}{E}
+                (пр. I.24),\\
+                что противоречит гипотезе.\\
+                \vspace{-1em}
+                \[\text{$\scalebox{0.6}{$\therefore$}$}\sector{yellow}{A}{B}{C}>\sector{black}{D}{E}{F}\]
+            \end{center}
+            \rightline{ч.б.д.}
+        \end{column}
+
+        \begin{column}
+            \begin{center}
+                \begin{tikzpicture}
+                    \coordinate (A) at (0,0);
+                    \coordinate (C) at (-1.5,-4.5);
+                    \coordinate (B) at (1.5,-3);
+                    \draw pic [fill=yellow] {angle = C--A--B};
+                    \draw[blue, ultra thick] (A) -- (B);
+                    \draw[red, ultra thick] (A) -- (C);
+                    \draw[black, ultra thick] (C) -- (B);
+                    \node[above] at (A) {\tiny$A$};
+                    \node[right] at (B) {\tiny$B$};
+                    \node[left] at (C) {\tiny$C$};
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \coordinate (D) at (0,0);
+                    \coordinate (F) at (-1.7,-4.5);
+                    \coordinate (E) at (0.5,-3.5);
+                    \draw pic [fill=black] {angle = F--D--E};
+                    \draw[blue, thin] (E) -- (D);
+                    \draw[red, thin] (F) -- (D);
+                    \draw[yellow, thin] (E) -- (F);
+                    \node[above] at (D) {\tiny$D$};
+                    \node[right] at (E) {\tiny$E$};
+                    \node[left] at (F) {\tiny$F$};
+                \end{tikzpicture}
+            \end{center}
+        \end{column}
+    \end{paracol}
+\end{document}

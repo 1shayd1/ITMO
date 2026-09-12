@@ -1,0 +1,80 @@
+<root>
+    <schedule>
+        <name>Tuesday</name>
+        <lessons>
+            <subject>Linear algebra</subject>
+            <type>Lecture</type>
+            <teacher>Koltsova Tatyana Borisovna</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>1506</room>
+            <startime>09:50</startime>
+            <endtime>11:20</endtime>
+        </lessons>
+        <lessons>
+            <subject>Linear algebra</subject>
+            <type>Practical lesson</type>
+            <teacher>Tanchenko Julia Valerievna</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>2306/1</room>
+            <startime>11:30</startime>
+            <endtime>13:00</endtime>
+        </lessons>
+        <lessons>
+            <subject>Mathematical analysis</subject>
+            <type>Lecture</type>
+            <teacher>Koltsova Tatyana Borisovna</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>1506</room>
+            <startime>13:30</startime>
+            <endtime>15:00</endtime>
+        </lessons>
+        <lessons>
+            <subject>Mathematical analysis</subject>
+            <type>Practical lesson</type>
+            <teacher>Mitina Tatyana Evgenievna</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>2306/2</room>
+            <startime>15:30</startime>
+            <endtime>17:00</endtime>
+        </lessons>
+        <lessons>
+            <subject>Athletics class</subject>
+            <type>Sport lesson</type>
+            <teacher>Volkova Kseniya Nikolaevna</teacher>
+            <place>Raevskogo av., 16</place>
+            <room>V.I.Alekseev sports complex</room>
+            <startime>19:30</startime>
+            <endtime>20:30</endtime>
+        </lessons>
+    </schedule>
+    <schedule>
+        <name>Thursday</name>
+        <lessons>
+            <subject>History</subject>
+            <type>Practical lesson</type>
+            <teacher>Bogomazov Nikolay Ivanovich</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>2414</room>
+            <startime>09:50</startime>
+            <endtime>11:20</endtime>
+        </lessons>
+        <lessons>
+            <subject>History</subject>
+            <type>Lecture</type>
+            <teacher>Bogomazov Nikolay Ivanovich</teacher>
+            <place>Kronverskiy av., 49</place>
+            <room>2337</room>
+            <startime>11:30</startime>
+            <endtime>13:00</endtime>
+        </lessons>
+        <lessons>
+            <subject>Athletics class</subject>
+            <type>Sport lesson</type>
+            <teacher>Volkova Kseniya Nikolaevna</teacher>
+            <place>Raevskogo av., 16</place>
+            <room>V.I.Alekseev sports complex</room>
+            <startime>19:30</startime>
+            <endtime>20:30</endtime>
+        </lessons>
+    </schedule>
+</root>

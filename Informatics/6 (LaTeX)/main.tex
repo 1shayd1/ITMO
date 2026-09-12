@@ -1,0 +1,32 @@
+%#Author = Shalabodov Yaroslav Dmitrievich
+%#Group = P3110
+%#Date =  23.11.25
+\documentclass[11pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage[a4paper, margin=0.5cm, bottom=1.5cm]{geometry}
+\usepackage{ragged2e} % Улучшенное выравнивание текста
+\usepackage{graphicx} % Для добавления иллюстраций
+\usepackage{tabularx} % Таблицы
+\usepackage{icomma} % Делает запятую в формулах более "интеллектуальной"
+\usepackage{lipsum} 
+\usepackage{paracol} % Разбиение текста на колонки
+\usepackage{amsmath} % Математические формулы
+\usepackage{fancyhdr} % Настройка стиля страницы
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{microtype}
+\graphicspath{{./images}} % Путь до картинок
+\columnratio{0.33,0.67} % Соотношение размеров колонок
+
+\begin{document}
+    {\fontsize{14pt}{13pt}\selectfont
+    \newgeometry{a4paper,top=0.5cm,left=3cm,right=1.5cm,bottom=2cm}
+    \input{title.tex}
+    }
+    \restoregeometry
+    \pagecolor[rgb]{0.95,0.93,0.86}
+    \input{article.tex}
+\end{document}

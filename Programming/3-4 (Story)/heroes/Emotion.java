@@ -1,0 +1,5 @@
+package heroes;
+
+public enum Emotion {
+    THRILLED, SHOCKED, DELIGHTED, OVERJOYED, ASTONISHED, ECSTATIC, AMAZED, AMUSED, STUNNED
+}

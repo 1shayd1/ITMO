@@ -1,0 +1,21 @@
+insert 3
+Gay
+12
+12
+
+
+34
+show
+insert 4
+Chill
+23
+23
+
+
+23
+show
+remove_key 3
+show
+remove_key 4
+clear
+show

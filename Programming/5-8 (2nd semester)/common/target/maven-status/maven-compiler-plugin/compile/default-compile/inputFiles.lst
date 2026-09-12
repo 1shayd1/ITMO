@@ -1,0 +1,10 @@
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/model/Route.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/request_and_response/CommandType.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/request_and_response/Request.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/model/Location.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/utils/TcpUtil.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/AuditEvent.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/exceptions/InputCancelledException.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/model/Coordinates.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/utils/Validator.java
+/home/shalabod/GitHub/ITMO/Programming/5-8 (2nd semester)/common/src/main/java/org/shayd1/request_and_response/Response.java
