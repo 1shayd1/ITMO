@@ -9,9 +9,9 @@ temp_b:         .word 0x00
 temp:           .word 0x00
 gcd:            .word 0x01
 
-    .text
-    .org 0x200
 
+    .text
+    .org 0x33
 _start:
     load           input_addr
     load_acc
@@ -21,8 +21,6 @@ _start:
     bgtz           check_b
     load           input_addr
     load_acc
-    store_addr     b
-    store_addr     temp_b
     load_imm       -1
     store_ind       output_addr
     halt
@@ -30,6 +28,10 @@ _start:
 check_b:
     load           input_addr
     load_acc
+    jmp            second_part_of_code
+
+    .org 0x88
+second_part_of_code:
     store_addr     b
     store_addr     temp_b
 
@@ -63,6 +65,6 @@ find_lcm:
     halt
 
 overflow:
-    load_imm       -858993460
+    load_imm       0xCCCCCCCC
     store_ind      output_addr
     halt

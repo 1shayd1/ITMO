@@ -1,9 +1,9 @@
 
-name: "assert lcm(0, 5) == [-1]"
+name: "assert lcm(34, 5) == 170"
 limit: 2000
 memory_size: 0x1000
 memory_mapped_io:
-  0x80: [0, 5]
+  0x80: [34, 5]
   0x84: []
 reports:
   - name: Check results
@@ -15,4 +15,4 @@ reports:
       numio[0x84]: {io:0x84:dec}
     assert: |
       numio[0x80]: [] >>> []
-      numio[0x84]: [] >>> [-1]
+      numio[0x84]: [] >>> [170]
