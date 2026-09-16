@@ -1,0 +1,10 @@
+cat
+hi
+dog
+the quick brown fox
+123
+a b c
+abcd
+hello
+run
+tree

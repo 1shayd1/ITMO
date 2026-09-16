@@ -1,5 +1,4 @@
     .data
-
 input_addr:     .word 0x80
 output_addr:    .word 0x84
 a:              .word 0x00
@@ -11,7 +10,6 @@ gcd:            .word 0x01
 
 
     .text
-    .org 0x33
 _start:
     load           input_addr
     load_acc
@@ -30,7 +28,7 @@ check_b:
     load_acc
     jmp            second_part_of_code
 
-    .org 0x88
+    .org 0x93
 second_part_of_code:
     store_addr     b
     store_addr     temp_b
