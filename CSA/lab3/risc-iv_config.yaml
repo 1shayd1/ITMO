@@ -1,4 +1,3 @@
-# debug_simple_assert.yaml
 name: "assert reverse_string_pstr('hello\\n') == ([5], 'olleh')"
 limit: 500
 memory_size: 4096
