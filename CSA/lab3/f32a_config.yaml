@@ -10,5 +10,5 @@ reports:
     slice: last       
     view: |     
       numio[0x84]: {io:0x84:dec}
-    assert: |           #[cite: 1]
+    assert: |   
       numio[0x84]: [] >>> [32]
