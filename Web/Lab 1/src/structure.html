@@ -13,10 +13,10 @@
         </header>
     </fieldset>
 
-    <div class="input-block">
-        <form>
+    <div>
+        <form class="input-block">
+            <br/>
             <fieldset>
-                <br/>
                 <div>
                     <label for="x-select">Поле Х</label>
                     <select id="x-select">
@@ -43,40 +43,51 @@
                 <div>
                     <button type="submit">Проверить</button>
                 </div>
-                <br/>
-
-                <fieldset>
-                    <legend>Поле R</legend>
-                    <div>
-                        <input type="radio" id="r-1" name="radio" value="1"/>
-                        <label for="r-1">1</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="r-1-5" name="radio" value="1.5"/>
-                        <label for="r-1-5">1.5</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="r-2" name="radio" value="2"/>
-                        <label for="r-2">2</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="r-2-5" name="radio" value="2.5"/>
-                        <label for="r-2-5">2.5</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="r-3" name="radio" value="3"/>
-                        <label for="r-3">3</label>
-                    </div>
-                </fieldset>
-                <br/>
             </fieldset>
         </form>
+
+        <fieldset>
+            <legend>Поле R</legend>
+            <div>
+                <input type="radio" id="r-1-5" name="radio" value="1.5"/>
+                <label for="r-1-5">1.5</label>
+
+                <input type="radio" id="r-3-5" name="radio" value="3.5"/>
+                <label for="r-3-5">3.5</label>
+            </div>
+
+            <div>
+                <input type="radio" id="r-2" name="radio" value="2"/>
+                <label for="r-2">2.0</label>
+
+                <input type="radio" id="r-4" name="radio" value="4"/>
+                <label for="r-4">4.0</label>
+            </div>
+
+            <div>
+                <input type="radio" id="r-2-5" name="radio" value="2.5"/>
+                <label for="r-2-5">2.5</label>
+
+                <input type="radio" id="r-4-5" name="radio" value="4.5" />
+                <label for="r-4-5">4.5</label>
+            </div>
+
+            <div>
+                <input type="radio" id="r-3" name="radio" value="3" checked/>
+                <label for="r-3">3.0</label>
+
+                <input type="radio" id="r-5" name="radio" value="5"/>
+                <label for="r-5">5.0</label>
+            </div>
+        </fieldset>
+        <br/>
     </div>
 
     <div class="canvas-block">
         <fieldset>
             <canvas height="460" width="460" id="canvas"></canvas>
         </fieldset>
+        <br/>
     </div>
 
     <div class="table-block">

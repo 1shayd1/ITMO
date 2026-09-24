@@ -2,19 +2,41 @@ window.onload = function () {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
-    const ValueR = 3 * 40 ;
+    const form = document.querySelector('.input-block');
 
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const X = document.getElementById('x-select');
+        const Y = document.getElementById('y-select');
+    })
+
+    // canvas settings
     const width = canvas.width;
     const height = canvas.height;
     const centerX = width / 2;
     const centerY = height / 2;
     const arrowLength = 4;
 
-    drawPicture(width, height, centerX, centerY, arrowLength, ctx, ValueR);
+    const radios = document.querySelectorAll('input[name="radio"]');
+    let currentR = 3 * 40;
+
+    drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR);
+
+    radios.forEach(radio => {
+        radio.addEventListener('change',() => {
+            const newR = document.querySelector('input[name="radio"]:checked').value * 40;
+            if (newR !== currentR) {
+                currentR = newR;
+                drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR);
+            }
+        });
+    })
 }
+
 
 function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r) {
 
+    ctx.clearRect(0, 0, width, height);
     //circle-quater
     const startAngle = Math.PI / 180 * 270
     const endAngle = 0;
@@ -139,8 +161,6 @@ function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r) {
     ctx.textBaseline = "middle";
     ctx.fillText("R", centerX + r, centerY + 13);
     ctx.fillText("R", centerX - r, centerY + 13);
-    ctx.fillText("R/2", centerX + r/2, centerY - 13);
-    ctx.fillText("R/2", centerX + 13, centerY - r/2);
     ctx.fillText("R", centerX - 13, centerY - r);
     ctx.fillText("R", centerX - 13, centerY + r);
 }
