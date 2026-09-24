@@ -45,8 +45,6 @@ find_gcd:
     store          temp_a
     jmp            find_gcd
 
-    jmp            finish_gcd
-
     .text
     .org 0x88
 finish_gcd:
