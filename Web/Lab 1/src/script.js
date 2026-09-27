@@ -15,6 +15,7 @@ window.onload = function () {
 
     const radios = document.querySelectorAll('input[name="radio"]');
     let currentR = 3 * 40;
+    let errorMessage = document.getElementById("y-error");
 
     drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
 
@@ -23,6 +24,7 @@ window.onload = function () {
             const newR = document.querySelector('input[name="radio"]:checked').value * 40;
             if (newR !== currentR) {
                 currentR = newR;
+                errorMessage.textContent = "";
                 drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null,null, startAngle, endAngle);
             }
         });
@@ -32,7 +34,6 @@ window.onload = function () {
         e.preventDefault();
         const checkX = parseFloat(document.getElementById('x-select').value);
         const checkY_1 = document.getElementById('y-text').value;
-        const errorMessage = document.getElementById("y-error");
 
         if (!twoDigitsAfterDot(checkY_1)) {
             errorMessage.textContent = 'Y должен быть числом и содержать максимум 2 знака после запятой';
@@ -48,9 +49,11 @@ window.onload = function () {
             return;
         }
 
+        addToTable(checkX, checkY, currentR / 40)
 
         const X = centerX + checkX * 40;
         const Y = centerY - checkY * 40;
+
         errorMessage.textContent = "";
         drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
     })
@@ -227,3 +230,38 @@ function correctNumber (float) {
     return float < 3 && float > -3;
 }
 
+function checkTarget(X, Y, r) {
+    //check rectangle
+    if (X >= -r &&  X <= 0 && Y <= r/2 && Y >=0) {
+        return true;
+    }
+
+    //check triangle
+    if (X >= 0 && Y <= 0 && Y >= 2*X - r) {
+        return true;
+    }
+
+    //check pizza quater
+    if (Y >= 0 && X >= 0 && X*X + Y*Y <= r*r){
+        return true;
+    }
+
+    return false;
+}
+
+function addToTable (X, Y, r) {
+    const tableRow = document.querySelector(".table-right table tbody");
+    const newRow = document.createElement("tr");
+
+    const currentTime = new Date().toLocaleTimeString();
+    const isHit = checkTarget(X, Y, r);
+
+    newRow.innerHTML = `
+         <td>${X}</td>
+         <td>${Y}</td>
+         <td>${r}</td>
+         <td>${isHit}</td>
+         <td>${currentTime}</td>
+    `;
+    tableRow.appendChild(newRow);
+}

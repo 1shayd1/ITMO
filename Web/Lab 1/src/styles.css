@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-left {
+    flex: 0.55;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.input-left form > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.input-left label[for="x-select"] {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.input-left #x-select {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+}
+
+.input-left label[for="y-text"] {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.input-left #y-text {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+}
+
+.input-left button {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#y-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    grid-column: 2;
+}
+
+.input-right {
+    flex: 0.45;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#r-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.first-row, .second-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.canvas-section {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.table-right {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 650px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.table-right table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto
+}
+
+.table-right th, .table-right td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+}
+
+.table-right th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-right caption {
+    font-weight: bold;
+    margin-top: 10px;
+}
