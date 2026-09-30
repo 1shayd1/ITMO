@@ -1,24 +1,16 @@
-; hello.asm 
-  section .data
-  message: db  'hello, garry!', 10
-  error_message: db 'error', 10
+global _start
 
-  section .text
-  global _start
+section .data
+message: db 'hello, world!', 10
 
-  _start:
-      mov     rax, 1           ; 'write' syscall number
-      mov     rdi, 1           ; stdout descriptor
-      mov     rsi, message     ; string address
-      mov     rdx, 14          ; string length in bytes
-      syscall
+section .text
+_start:
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, message
+	mov rdx, 14
+	syscall
 
-      mov     rax, 1
-      mov     rdi, 2
-      mov     rsi, error_message
-      mov     rdx, 6
-      syscall
-
-      mov     rax, 60          ; 'exit' syscall number
-      xor     rdi, rdi
-      syscall
+	mov rax, 60
+        xor rdi, rdi
+	syscall

@@ -1,5 +1,0 @@
-first line
-
-third line
- 
-fifth line with text
