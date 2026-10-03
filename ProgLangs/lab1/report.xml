@@ -1,52 +1,20 @@
 <?xml version="1.0" ?>
-<testsuite name="IOLibraryTest-20260930163650" tests="15" time="0.443" failures="8" errors="0">
-	<testcase classname="IOLibraryTest" name="test_print_char" time="0.032"/>
-	<testcase classname="IOLibraryTest" name="test_print_string" time="0.031"/>
-	<testcase classname="IOLibraryTest" name="test_string_copy" time="0.033"/>
-	<testcase classname="IOLibraryTest" name="test_string_copy_too_long" time="0.034"/>
-	<testcase classname="IOLibraryTest" name="test_string_equals" time="0.041"/>
-	<testcase classname="IOLibraryTest" name="test_string_length" time="0.028"/>
-	<testcase classname="IOLibraryTest" name="test_string_not_equals" time="0.068"/>
-	<testcase classname="IOLibraryTest" name="test_parse_int" time="0.012">
-		<failure type="AssertionError" message="'' != '0'&#10;+ 0&#10; : parse_int('0') parsed wrong number: '', expected: '0'"><![CDATA[[1;35mAssertionError[0m: [35m'' != '0'
-+ 0
- : parse_int('0') parsed wrong number: '', expected: '0'[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_parse_uint" time="0.014">
-		<failure type="AssertionError" message="'' != '0'&#10;+ 0&#10; : parse_uint('0') parsed wrong number: '', expected: '0'"><![CDATA[[1;35mAssertionError[0m: [35m'' != '0'
-+ 0
- : parse_uint('0') parsed wrong number: '', expected: '0'[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_print_int" time="0.010">
-		<failure type="AssertionError" message="'' != '-1'&#10;+ -1&#10; : print_int('-1') printed wrong number: ''"><![CDATA[[1;35mAssertionError[0m: [35m'' != '-1'
-+ -1
- : print_int('-1') printed wrong number: ''[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_print_uint" time="0.010">
-		<failure type="AssertionError" message="'' != '18446744073709551615'&#10;+ 18446744073709551615&#10; : print_uint('-1') printed wrong number: '', expected: '18446744073709551615'"><![CDATA[[1;35mAssertionError[0m: [35m'' != '18446744073709551615'
-+ 18446744073709551615
- : print_uint('-1') printed wrong number: '', expected: '18446744073709551615'[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_read_char" time="0.011">
-		<failure type="AssertionError" message="0 != 45 : read_char(45) returned incorrect char: 0"><![CDATA[[1;35mAssertionError[0m: [35m0 != 45 : read_char(45) returned incorrect char: 0[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_read_word" time="0.084">
-		<failure type="AssertionError" message="-11 == -11 : segmentation fault"><![CDATA[[1;35mAssertionError[0m: [35m-11 == -11 : segmentation fault[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_read_word_length" time="0.013">
-		<failure type="AssertionError" message="0 != 2 : read_word('-1') returned incorrect length: 0, expected: 2"><![CDATA[[1;35mAssertionError[0m: [35m0 != 2 : read_word('-1') returned incorrect length: 0, expected: 2[0m
-]]></failure>
-	</testcase>
-	<testcase classname="IOLibraryTest" name="test_read_word_too_long" time="0.020">
-		<failure type="AssertionError" message="0 == 0 : read_word('short') does not overflow buffer, but fails"><![CDATA[[1;35mAssertionError[0m: [35m0 == 0 : read_word('short') does not overflow buffer, but fails[0m
-]]></failure>
-	</testcase>
+<testsuite name="IOLibraryTest-20261003233256" tests="15" time="0.846" failures="0" errors="0">
+	<testcase classname="IOLibraryTest" name="test_parse_int" time="0.086"/>
+	<testcase classname="IOLibraryTest" name="test_parse_uint" time="0.047"/>
+	<testcase classname="IOLibraryTest" name="test_print_char" time="0.042"/>
+	<testcase classname="IOLibraryTest" name="test_print_int" time="0.076"/>
+	<testcase classname="IOLibraryTest" name="test_print_string" time="0.040"/>
+	<testcase classname="IOLibraryTest" name="test_print_uint" time="0.070"/>
+	<testcase classname="IOLibraryTest" name="test_read_char" time="0.097"/>
+	<testcase classname="IOLibraryTest" name="test_read_word" time="0.014"/>
+	<testcase classname="IOLibraryTest" name="test_read_word_length" time="0.115"/>
+	<testcase classname="IOLibraryTest" name="test_read_word_too_long" time="0.027"/>
+	<testcase classname="IOLibraryTest" name="test_string_copy" time="0.044"/>
+	<testcase classname="IOLibraryTest" name="test_string_copy_too_long" time="0.043"/>
+	<testcase classname="IOLibraryTest" name="test_string_equals" time="0.053"/>
+	<testcase classname="IOLibraryTest" name="test_string_length" time="0.039"/>
+	<testcase classname="IOLibraryTest" name="test_string_not_equals" time="0.052"/>
 	<system-out><![CDATA[]]></system-out>
 	<system-err><![CDATA[]]></system-err>
 </testsuite>
