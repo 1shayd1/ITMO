@@ -43,14 +43,10 @@ print_char:
 
 ; Переводит строку (выводит символ с кодом 0xA)
 print_newline:
-    push 0xA
-    mov rax, 1
-    mov rdx, 1
-    mov rsi, rsp
-    mov rdi, 1
-    syscall
-    pop rax
-    xor rax, rax
+    mov rdi, 0xA
+    push rdi
+    call print_char
+    pop rdi
     ret
 
 ; Выводит беззнаковое 8-байтовое число в десятичном формате 
@@ -216,12 +212,12 @@ parse_uint:
     xor rax, rax
     xor rdx, rdx;        счетчик
     .loop:
-	mov r8b, byte [rdi + rdx]
-        cmp r8b, 0x30
+	movzx r8, byte [rdi + rdx]
+        cmp r8, 0x30
         jl .finish
-	cmp r8b, 0x39
+	cmp r8, 0x39
         jg .finish
-        sub r8b, 0x30
+        sub r8, 0x30
         imul rax, rax, 10
         add rax, r8
         inc rdx
@@ -256,8 +252,12 @@ parse_int:
 	push rcx
 	call parse_uint
         pop rcx
+
+        test rdx, rdx
+        jz .end
         neg rax
         inc rdx
+    .end:
         ret 
 
 ; Принимает указатель на строку, указатель на буфер и длину буфера

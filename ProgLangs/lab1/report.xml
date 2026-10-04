@@ -1,20 +1,20 @@
 <?xml version="1.0" ?>
-<testsuite name="IOLibraryTest-20261003233256" tests="15" time="0.846" failures="0" errors="0">
-	<testcase classname="IOLibraryTest" name="test_parse_int" time="0.086"/>
-	<testcase classname="IOLibraryTest" name="test_parse_uint" time="0.047"/>
+<testsuite name="IOLibraryTest-20261004220754" tests="15" time="0.828" failures="0" errors="0">
+	<testcase classname="IOLibraryTest" name="test_parse_int" time="0.090"/>
+	<testcase classname="IOLibraryTest" name="test_parse_uint" time="0.043"/>
 	<testcase classname="IOLibraryTest" name="test_print_char" time="0.042"/>
-	<testcase classname="IOLibraryTest" name="test_print_int" time="0.076"/>
-	<testcase classname="IOLibraryTest" name="test_print_string" time="0.040"/>
+	<testcase classname="IOLibraryTest" name="test_print_int" time="0.070"/>
+	<testcase classname="IOLibraryTest" name="test_print_string" time="0.043"/>
 	<testcase classname="IOLibraryTest" name="test_print_uint" time="0.070"/>
-	<testcase classname="IOLibraryTest" name="test_read_char" time="0.097"/>
-	<testcase classname="IOLibraryTest" name="test_read_word" time="0.014"/>
-	<testcase classname="IOLibraryTest" name="test_read_word_length" time="0.115"/>
+	<testcase classname="IOLibraryTest" name="test_read_char" time="0.094"/>
+	<testcase classname="IOLibraryTest" name="test_read_word" time="0.013"/>
+	<testcase classname="IOLibraryTest" name="test_read_word_length" time="0.108"/>
 	<testcase classname="IOLibraryTest" name="test_read_word_too_long" time="0.027"/>
-	<testcase classname="IOLibraryTest" name="test_string_copy" time="0.044"/>
-	<testcase classname="IOLibraryTest" name="test_string_copy_too_long" time="0.043"/>
-	<testcase classname="IOLibraryTest" name="test_string_equals" time="0.053"/>
+	<testcase classname="IOLibraryTest" name="test_string_copy" time="0.042"/>
+	<testcase classname="IOLibraryTest" name="test_string_copy_too_long" time="0.042"/>
+	<testcase classname="IOLibraryTest" name="test_string_equals" time="0.052"/>
 	<testcase classname="IOLibraryTest" name="test_string_length" time="0.039"/>
-	<testcase classname="IOLibraryTest" name="test_string_not_equals" time="0.052"/>
+	<testcase classname="IOLibraryTest" name="test_string_not_equals" time="0.055"/>
 	<system-out><![CDATA[]]></system-out>
 	<system-err><![CDATA[]]></system-err>
 </testsuite>
