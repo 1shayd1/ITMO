@@ -1,6 +1,17 @@
+const STORAGE_KEY = 'results_in_table';
+
 window.onload = function () {
+    drawPage()
+}
+
+function drawPage() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
+    const records = loadResults()
+    const button = document.getElementById('clear-button');
+    const radios = document.querySelectorAll('input[name="radio"]');
+    let currentR = 3 * 40;
+    let errorMessage = document.getElementById("y-error");
 
     const form = document.querySelector('.input-block');
 
@@ -13,11 +24,38 @@ window.onload = function () {
     const startAngle = Math.PI / 180 * 270
     const endAngle = 0;
 
-    const radios = document.querySelectorAll('input[name="radio"]');
-    let currentR = 3 * 40;
-    let errorMessage = document.getElementById("y-error");
+    function submitPoint(pointX, pointY) {
+        const record = createRecord(pointX, pointY, currentR / 40)
+        const listOfRecords = loadResults()
+
+        listOfRecords.push(record)
+        saveResults(listOfRecords)
+
+        addToTable(record)
+
+        const X = centerX + pointX * 40;
+        const Y = centerY - pointY * 40;
+
+        errorMessage.textContent = "";
+        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
+    }
 
     drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
+
+    records.forEach((record) => {
+        addToTable(record);
+    })
+
+    canvas.addEventListener('click', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const px = (e.clientX - rect.left) * (canvas.width / rect.width);
+        const py = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+        const x = Math.round((px-centerX) / 40 * 100) / 100
+        const y = Math.round((centerY-py) / 40 * 100) / 100
+
+        submitPoint(x, y);
+    });
 
     radios.forEach(radio => {
         radio.addEventListener('change',() => {
@@ -30,13 +68,19 @@ window.onload = function () {
         });
     })
 
+    button.addEventListener('click', () => {
+        clearTable()
+    })
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const checkX = parseFloat(document.getElementById('x-select').value);
-        const checkY_1 = document.getElementById('y-text').value;
+        const raw_Y = document.getElementById('y-text').value;
+        const checkY_1 = raw_Y.replace(',','.');
+
 
         if (!twoDigitsAfterDot(checkY_1)) {
-            errorMessage.textContent = 'Y должен быть числом и содержать максимум 2 знака после запятой';
+            errorMessage.textContent = 'Y должен быть числом (-3;3) и содержать максимум 2 знака после запятой';
             drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
             return;
         }
@@ -44,21 +88,15 @@ window.onload = function () {
         const checkY = parseFloat(checkY_1);
 
         if (!correctNumber(checkY)) {
-            errorMessage.textContent = 'Y должен быть числом и принадлежать (-3;3)';
+            errorMessage.textContent = 'Y должен принадлежать (-3;3)';
             drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
             return;
         }
 
-        addToTable(checkX, checkY, currentR / 40)
+        submitPoint(checkX, checkY);
 
-        const X = centerX + checkX * 40;
-        const Y = centerY - checkY * 40;
-
-        errorMessage.textContent = "";
-        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
     })
 }
-
 
 function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r, X, Y, startAngle, endAngle) {
 
@@ -249,19 +287,43 @@ function checkTarget(X, Y, r) {
     return false;
 }
 
-function addToTable (X, Y, r) {
-    const tableRow = document.querySelector(".table-right table tbody");
+function addToTable (record) {
+    const tableRow = document.querySelector(".table-scroll table tbody");
     const newRow = document.createElement("tr");
 
-    const currentTime = new Date().toLocaleTimeString();
-    const isHit = checkTarget(X, Y, r);
-
     newRow.innerHTML = `
-         <td>${X}</td>
-         <td>${Y}</td>
-         <td>${r}</td>
-         <td>${isHit}</td>
-         <td>${currentTime}</td>
-    `;
+        <td>${record.x.toFixed(2)}</td>
+        <td>${record.y.toFixed(2)}</td>
+        <td>${record.r}</td>
+        <td>${record.isHit}</td>
+        <td>${new Date(record.time).toLocaleTimeString()}</td>
+    `
     tableRow.appendChild(newRow);
+}
+
+function createRecord (X, Y, r) {
+    const currentTime = Date.now();
+    const isHit = checkTarget(X, Y, r);
+    return {x:X, y:Y, r:r, isHit:isHit, time:currentTime};
+}
+
+function loadResults() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw === null) {
+        return [];
+    }
+    try {
+        return JSON.parse(raw);
+    } catch (e) {
+        return []
+    }
+}
+
+function saveResults(records) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
+}
+
+function clearTable() {
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelector('.table-scroll table tbody').innerHTML = '';
 }
