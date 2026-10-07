@@ -1,0 +1,19 @@
+limit: 100000
+memory_size: 4096
+
+memory_mapped_io:
+  0x80: [51, 65, 52, 66, 52, 67, 10]   # "3A4B4C\n"
+  0x84: []
+
+reports:
+  - name: Journal
+    slice: all
+    view: |
+      {pc:hex}: {instruction:next} {pc:label}
+
+  - name: Result
+    slice: last
+    view: |
+      out sym: {io:0x84:sym}
+      out dec: {io:0x84:dec}
+      out hex: {io:0x84:hex}
