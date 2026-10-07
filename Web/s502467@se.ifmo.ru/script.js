@@ -69,8 +69,7 @@ function drawPage() {
     })
 
     button.addEventListener('click', () => {
-        clearTable();
-        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null,null, startAngle, endAngle);
+        clearTable()
     })
 
     form.addEventListener('submit', (e) => {

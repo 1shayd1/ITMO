@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Web Lab 1</title>
+</head>
+
+<body>
+    <header>
+        Шалабодов Ярослав Дмитриевич, Р3110, Вариант 12668
+    </header>
+
+    <div class="main">
+        <div class="left-section">
+            <div class="input-section">
+                <div class="input-left">
+                    <form class="input-block">
+                        <div>
+                            <label for="x-select">Поле Х</label>
+                            <select id="x-select">
+                                <option value="-3" selected>-3</option>
+                                <option value="-2">-2</option>
+                                <option value="-1">-1</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <label for="y-text">Поле Y</label>
+                            <input type="text" id="y-text" placeholder="введите значение (-3...3)"/>
+
+                            <button type="submit">Проверить</button>
+                        </div>
+
+                        <div>
+                            <div id="y-error"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="input-right">
+                    <div>
+                        <label id="r-label">Поле R</label>
+                    </div>
+
+                    <div class="first-row">
+                        <div>
+                            <input type="radio" id="r-1-5" name="radio" value="1.5"/>
+                            <label for="r-1-5">1.5</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-2" name="radio" value="2"/>
+                            <label for="r-2">2.0</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-2-5" name="radio" value="2.5"/>
+                            <label for="r-2-5">2.5</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-3" name="radio" value="3" checked/>
+                            <label for="r-3">3.0</label>
+                        </div>
+                    </div>
+
+                    <div class="second-row">
+                        <div>
+                            <input type="radio" id="r-3-5" name="radio" value="3.5"/>
+                            <label for="r-3-5">3.5</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-4" name="radio" value="4"/>
+                            <label for="r-4">4.0</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-4-5" name="radio" value="4.5" />
+                            <label for="r-4-5">4.5</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="r-5" name="radio" value="5"/>
+                            <label for="r-5">5.0</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="canvas-section">
+                <canvas height="460" width="460" id="canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="table-right">
+            <div class="table-scroll">
+                <table>
+                    <caption>Статистика попадания точки </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">X</th>
+                        <th scope="col">Y</th>
+                        <th scope="col">R</th>
+                        <th scope="col">Попадание</th>
+                        <th scope="col">Время</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" id="clear-button">Очистить таблицу</button>
+        </div>
+    </div>
+
+</body>
+</html>
