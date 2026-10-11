@@ -7,4 +7,4 @@ parse_uint: parse_uint.o
 	nasm $(ASMFLAGS) $< -o $@
 
 clean:
-	rm -f *.o parse_uint
+	rm -rf *.o parse_uint
