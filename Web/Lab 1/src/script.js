@@ -39,8 +39,11 @@ function drawPage() {
         errorMessage.textContent = "";
         drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
     }
+    function simpleDraw() {
+        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
+    }
 
-    drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
+    simpleDraw();
 
     records.forEach((record) => {
         addToTable(record);
@@ -63,14 +66,14 @@ function drawPage() {
             if (newR !== currentR) {
                 currentR = newR;
                 errorMessage.textContent = "";
-                drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null,null, startAngle, endAngle);
+                simpleDraw();
             }
         });
     })
 
     button.addEventListener('click', () => {
         clearTable();
-        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null,null, startAngle, endAngle);
+        simpleDraw();
     })
 
     form.addEventListener('submit', (e) => {
@@ -81,21 +84,20 @@ function drawPage() {
 
 
         if (!twoDigitsAfterDot(checkY_1)) {
-            errorMessage.textContent = 'Y должен быть числом (-3;3) и содержать максимум 2 знака после запятой';
-            drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
+            errorMessage.textContent = 'Y must ∈ (-3;3) and have no more than 2 digits after dot/comma';
+            simpleDraw()
             return;
         }
 
         const checkY = parseFloat(checkY_1);
 
         if (!correctNumber(checkY)) {
-            errorMessage.textContent = 'Y должен принадлежать (-3;3)';
-            drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
+            errorMessage.textContent = 'Y must ∈ (-3;3)';
+            simpleDraw()
             return;
         }
 
         submitPoint(checkX, checkY);
-
     })
 }
 
@@ -297,7 +299,7 @@ function addToTable (record) {
         <td>${record.y.toFixed(2)}</td>
         <td>${record.r}</td>
         <td>${record.isHit}</td>
-        <td>${new Date(record.time).toLocaleTimeString()}</td>
+        <td>${new Date(record.time).toLocaleString()}</td>
     `
     tableRow.appendChild(newRow);
 }
