@@ -1,3 +1,5 @@
-%define process(x) (x*3 + 23)
+%define a 3
+%xdefine b a+1
+%define a 10
 
-mov rax, process (rcx)
+mov rax, b * 2
