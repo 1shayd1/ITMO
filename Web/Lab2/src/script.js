@@ -24,29 +24,34 @@ function drawPage() {
     const endAngle = Math.PI;
 
     async function submitPoint(pointX, pointY) {
-        const body = new URLSearchParams({
-            x: pointX,
-            y: pointY,
-            r: currentR / 40
-        });
+        try {
+            const body = new URLSearchParams({
+                x: pointX,
+                y: pointY,
+                r: currentR / 40
+            });
 
-        const response = await fetch("/fcgi-bin/hello-world.jar", {
-            method: "POST",
-            body: body
-        });
+            const response = await fetch("/fcgi-bin/hello-world.jar", {
+                method: "POST",
+                body: body
+            });
 
-        if (!response.ok) {
-            errorMessage.textContent = await response.text();
-            return
+            if (!response.ok) {
+                errorMessage.textContent = await response.text();
+                return
+            }
+
+            const record = await response.json();
+            addToTable(record);
+
+            const X = centerX + pointX * 40;
+            const Y = centerY - pointY * 40;
+            errorMessage.textContent = "";
+            drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
+        } catch (error) {
+            document.getElementById("y-error").textContent = "Could not submit point";
+            console.error(error);
         }
-
-        const record = await response.json();
-        addToTable(record);
-
-        const X = centerX + pointX * 40;
-        const Y = centerY - pointY * 40;
-        errorMessage.textContent = "";
-        drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, X, Y, startAngle, endAngle);
     }
     function simpleDraw() {
         drawPicture(width, height, centerX, centerY, arrowLength, ctx, currentR, null, null, startAngle, endAngle);
@@ -54,6 +59,12 @@ function drawPage() {
     simpleDraw();
 
     loadHistory();
+
+    button.addEventListener('click', async () => {
+        if (await clearTable()){
+            simpleDraw();
+        }
+    });
 
     canvas.addEventListener('click', (e) => {
         const rect = canvas.getBoundingClientRect();
@@ -77,11 +88,6 @@ function drawPage() {
         });
     })
 
-    button.addEventListener('click', () => {
-        clearTable();
-        simpleDraw();
-    })
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const checkX = parseFloat(document.getElementById('x-select').value);
@@ -90,7 +96,7 @@ function drawPage() {
 
 
         if (!twoDigitsAfterDot(checkY_1)) {
-            errorMessage.textContent = 'Y must ∈ (-5;3) and have no more than 2 digits after dot/comma';
+            errorMessage.textContent = 'Y must ∈ (-5;5) and have no more than 2 digits after dot/comma';
             simpleDraw()
             return;
         }
@@ -131,19 +137,42 @@ function addToTable (record) {
     tableRow.appendChild(newRow);
 }
 
-function clearTable() {
-    
+async function clearTable() {
+    try {
+        const response = await fetch("/fcgi-bin/hello-world.jar", {
+            method: "DELETE",
+        })
+
+        if (!response.ok) {
+            document.getElementById("y-error").textContent = await response.text();
+            return false;
+        }
+
+        document.querySelector(".table-scroll table tbody").innerHTML = "";
+        return true;
+    } catch (error) {
+        console.error(error);
+        document.getElementById("y-error").textContent = "Could not clear table";
+        return false;
+    }
+
 }
 
 async function loadHistory () {
-    const response = await fetch("/fcgi-bin/hello-world.jar");
-    if (!response.ok) {
-        return;
+    try {
+        const response = await fetch("/fcgi-bin/hello-world.jar");
+        if (!response.ok) {
+            document.getElementById("y-error").textContent = await response.text();
+            return;
+        }
+
+        const records = await response.json();
+
+        records.forEach((record) => {
+            addToTable(record);
+        })
+    } catch (error) {
+        document.getElementById("y-error").textContent = "Could not load history";
+        console.error(error);
     }
-
-    const records = await response.json();
-
-    records.forEach((record) => {
-        addToTable(record);
-    })
 }

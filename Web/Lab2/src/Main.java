@@ -29,8 +29,15 @@ public class Main {
                 continue;
             }
 
+            if (Objects.equals(method, "DELETE")){
+                dots.clear();
+                message = "The set of dots is cleared";
+                printContent(status, message, contentType);
+                continue;
+            }
+
             if (!Objects.equals(method, "POST")){
-                message = "The only allowed methods are POST and GET";
+                message = "The only allowed methods are POST, GET and DELETE";
                 status = "405 Method Not Allowed";
                 printContent(status, message, contentType);
                 continue;
