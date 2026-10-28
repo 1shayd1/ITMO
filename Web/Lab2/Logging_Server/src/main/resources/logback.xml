@@ -1,5 +1,6 @@
 <configuration>
     <property name="SERVICE" value="lab2-server"/>
+    <shutdownHook class="ch.qos.logback.core.hook.DefaultShutdownHook"/>
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>logs/server.log</file>
@@ -8,7 +9,29 @@
         </encoder>
     </appender>
 
+    <appender name="LOKI" class="com.github.loki4j.logback.Loki4jAppender">
+        <http>
+            <url>http://localhost:3100/loki/api/v1/push</url>
+        </http>
+        <batch>
+            <maxItems>4</maxItems>
+            <timeoutMs>500</timeoutMs>
+        </batch>
+        <labels>
+            app = ${SERVICE}
+            port = ${FCGI_PORT}
+            level = %level
+        </labels>
+        <structuredMetadata>
+            traceId = %X{traceId}
+        </structuredMetadata>
+        <message>
+            <pattern>%-5level [${SERVICE}:${FCGI_PORT}] [trace=%X{traceId}] %msg</pattern>
+        </message>
+    </appender>
+
     <root level="DEBUG">
         <appender-ref ref="FILE"/>
+        <appender-ref ref="LOKI"/>
     </root>
 </configuration>

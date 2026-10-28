@@ -31,9 +31,13 @@ function drawPage() {
                 r: currentR / 40
             });
 
+            const traceId = crypto.randomUUID();
+            console.log("trace",traceId);
+
             const response = await fetch("/fcgi-bin/hello-world.jar", {
                 method: "POST",
-                body: body
+                body: body,
+                headers: traceHeaders(traceId)
             });
 
             if (!response.ok) {
@@ -119,7 +123,7 @@ function twoDigitsAfterDot(str) {
 }
 
 function correctNumber (float) {
-    return float < 3 && float > -5;
+    return float < 5 && float > -5;
 }
 
 function addToTable (record) {
@@ -139,8 +143,12 @@ function addToTable (record) {
 
 async function clearTable() {
     try {
+        const traceId = crypto.randomUUID();
+        console.log("trace",traceId);
+
         const response = await fetch("/fcgi-bin/hello-world.jar", {
             method: "DELETE",
+            headers: traceHeaders(traceId)
         })
 
         if (!response.ok) {
@@ -160,7 +168,13 @@ async function clearTable() {
 
 async function loadHistory () {
     try {
-        const response = await fetch("/fcgi-bin/hello-world.jar");
+        const traceId = crypto.randomUUID();
+        console.log("trace",traceId);
+
+        const response = await fetch("/fcgi-bin/hello-world.jar", {
+            headers: traceHeaders(traceId)
+        });
+
         if (!response.ok) {
             document.getElementById("y-error").textContent = await response.text();
             return;
@@ -175,4 +189,8 @@ async function loadHistory () {
         document.getElementById("y-error").textContent = "Could not load history";
         console.error(error);
     }
+}
+
+function traceHeaders(traceId) {
+    return {"X-Request-ID": traceId};
 }

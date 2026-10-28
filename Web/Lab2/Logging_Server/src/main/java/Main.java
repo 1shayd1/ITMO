@@ -16,7 +16,7 @@ public class Main {
         final FCGIInterface fcgiInterface = new FCGIInterface();
         ArrayList<String> dots = new ArrayList<>();
         String port = System.getProperty("FCGI_PORT");
-        log.info("Server started on port: " + port);
+        log.info("Server is starting on port: " + port);
         while (fcgiInterface.FCGIaccept() >= 0) {
             long startTime = System.nanoTime();
 
