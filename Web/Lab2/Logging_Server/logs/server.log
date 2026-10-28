@@ -1,0 +1,186 @@
+11:05:01.429 INFO  [lab2-server:24468] [trace=8868750a-b5af-4fbb-a31e-d80eaa170a22] GET method called
+11:05:01.433 INFO  [lab2-server:24468] [trace=8868750a-b5af-4fbb-a31e-d80eaa170a22] 0 records are sent
+11:05:01.434 INFO  [lab2-server:24468] [trace=8868750a-b5af-4fbb-a31e-d80eaa170a22] Response is sent. Status: 200 OK
+11:05:06.313 INFO  [lab2-server:24468] [trace=c5f5daf2-68dd-49b2-bfe7-7a215352e9db] POST method called
+11:05:06.327 DEBUG [lab2-server:24468] [trace=c5f5daf2-68dd-49b2-bfe7-7a215352e9db] {x=1.2 y=2.73 r=3}
+11:05:06.328 INFO  [lab2-server:24468] [trace=c5f5daf2-68dd-49b2-bfe7-7a215352e9db] Is the target hit?: false
+11:05:06.333 INFO  [lab2-server:24468] [trace=c5f5daf2-68dd-49b2-bfe7-7a215352e9db] Response is sent. Status: 200 OK. Message: x=1.2&y=2.73&r=3. Worktime: 14775878
+11:05:07.911 INFO  [lab2-server:24468] [trace=dceef782-a875-4276-8c5d-99d020f836f6] POST method called
+11:05:07.912 DEBUG [lab2-server:24468] [trace=dceef782-a875-4276-8c5d-99d020f836f6] {x=1.33 y=1.1 r=3}
+11:05:07.912 INFO  [lab2-server:24468] [trace=dceef782-a875-4276-8c5d-99d020f836f6] Is the target hit?: true
+11:05:07.912 INFO  [lab2-server:24468] [trace=dceef782-a875-4276-8c5d-99d020f836f6] Response is sent. Status: 200 OK. Message: x=1.33&y=1.1&r=3. Worktime: 935793
+11:05:08.285 INFO  [lab2-server:24468] [trace=543db160-9101-4b4b-b362-8c698f3a6f24] POST method called
+11:05:08.286 DEBUG [lab2-server:24468] [trace=543db160-9101-4b4b-b362-8c698f3a6f24] {x=-0.92 y=0.53 r=3}
+11:05:08.286 INFO  [lab2-server:24468] [trace=543db160-9101-4b4b-b362-8c698f3a6f24] Is the target hit?: true
+11:05:08.286 INFO  [lab2-server:24468] [trace=543db160-9101-4b4b-b362-8c698f3a6f24] Response is sent. Status: 200 OK. Message: x=-0.92&y=0.53&r=3. Worktime: 1164506
+11:05:10.020 INFO  [lab2-server:24468] [trace=142df9f1-c643-48b5-a010-543f91bd36a9] POST method called
+11:05:10.021 DEBUG [lab2-server:24468] [trace=142df9f1-c643-48b5-a010-543f91bd36a9] {x=-0.67 y=-0.55 r=3}
+11:05:10.021 INFO  [lab2-server:24468] [trace=142df9f1-c643-48b5-a010-543f91bd36a9] Is the target hit?: true
+11:05:10.021 INFO  [lab2-server:24468] [trace=142df9f1-c643-48b5-a010-543f91bd36a9] Response is sent. Status: 200 OK. Message: x=-0.67&y=-0.55&r=3. Worktime: 1298810
+11:06:05.637 INFO  [lab2-server:24468] [trace=59ebdab0-9e8a-4b01-bb54-069828361c24] GET method called
+11:06:05.637 INFO  [lab2-server:24468] [trace=59ebdab0-9e8a-4b01-bb54-069828361c24] 4 records are sent
+11:06:05.637 INFO  [lab2-server:24468] [trace=59ebdab0-9e8a-4b01-bb54-069828361c24] Response is sent. Status: 200 OK
+11:06:13.392 INFO  [lab2-server:24468] [trace=6a6dacdb-a10c-4414-b78a-03fd4eb544f5] DELETE method called
+11:06:13.392 INFO  [lab2-server:24468] [trace=6a6dacdb-a10c-4414-b78a-03fd4eb544f5] DELETE method called. 4 records deleted
+11:06:13.392 INFO  [lab2-server:24468] [trace=6a6dacdb-a10c-4414-b78a-03fd4eb544f5] Response is sent. Status: 200 OK. Message: The set of dots is cleared
+11:07:01.338 INFO  [lab2-server:24468] [trace=a35243f6-be28-4dbd-8410-18d35d618743] GET method called
+11:07:01.338 INFO  [lab2-server:24468] [trace=a35243f6-be28-4dbd-8410-18d35d618743] 0 records are sent
+11:07:01.338 INFO  [lab2-server:24468] [trace=a35243f6-be28-4dbd-8410-18d35d618743] Response is sent. Status: 200 OK
+11:07:04.429 INFO  [lab2-server:24468] [trace=6fe76859-7e07-4eec-9b09-4dd7326b39fc] GET method called
+11:07:04.430 INFO  [lab2-server:24468] [trace=6fe76859-7e07-4eec-9b09-4dd7326b39fc] 0 records are sent
+11:07:04.430 INFO  [lab2-server:24468] [trace=6fe76859-7e07-4eec-9b09-4dd7326b39fc] Response is sent. Status: 200 OK
+11:07:10.160 INFO  [lab2-server:24468] [trace=7dd7584b-0b51-459f-a810-9607d645a476] POST method called
+11:07:10.160 DEBUG [lab2-server:24468] [trace=7dd7584b-0b51-459f-a810-9607d645a476] {x=1.88 y=1.33 r=3}
+11:07:10.160 INFO  [lab2-server:24468] [trace=7dd7584b-0b51-459f-a810-9607d645a476] Is the target hit?: true
+11:07:10.161 INFO  [lab2-server:24468] [trace=7dd7584b-0b51-459f-a810-9607d645a476] Response is sent. Status: 200 OK. Message: x=1.88&y=1.33&r=3. Worktime: 900235
+11:07:10.564 INFO  [lab2-server:24468] [trace=1c80a133-054f-4a61-acfe-74aa0ce9d961] POST method called
+11:07:10.565 DEBUG [lab2-server:24468] [trace=1c80a133-054f-4a61-acfe-74aa0ce9d961] {x=-1.95 y=0.23 r=3}
+11:07:10.565 INFO  [lab2-server:24468] [trace=1c80a133-054f-4a61-acfe-74aa0ce9d961] Is the target hit?: true
+11:07:10.566 INFO  [lab2-server:24468] [trace=1c80a133-054f-4a61-acfe-74aa0ce9d961] Response is sent. Status: 200 OK. Message: x=-1.95&y=0.23&r=3. Worktime: 1651818
+11:07:11.761 INFO  [lab2-server:24468] [trace=3436895d-84ff-46a5-b211-f2b7bdf82f5d] POST method called
+11:07:11.762 DEBUG [lab2-server:24468] [trace=3436895d-84ff-46a5-b211-f2b7bdf82f5d] {x=2.25 y=1.53 r=3}
+11:07:11.762 INFO  [lab2-server:24468] [trace=3436895d-84ff-46a5-b211-f2b7bdf82f5d] Is the target hit?: false
+11:07:11.763 INFO  [lab2-server:24468] [trace=3436895d-84ff-46a5-b211-f2b7bdf82f5d] Response is sent. Status: 200 OK. Message: x=2.25&y=1.53&r=3. Worktime: 1272330
+11:07:12.160 INFO  [lab2-server:24468] [trace=206ecd2b-32af-4c56-9a3b-1e6dfe4f7aa6] POST method called
+11:07:12.164 DEBUG [lab2-server:24468] [trace=206ecd2b-32af-4c56-9a3b-1e6dfe4f7aa6] {x=2.25 y=1.53 r=3}
+11:07:12.164 INFO  [lab2-server:24468] [trace=206ecd2b-32af-4c56-9a3b-1e6dfe4f7aa6] Is the target hit?: false
+11:07:12.164 INFO  [lab2-server:24468] [trace=206ecd2b-32af-4c56-9a3b-1e6dfe4f7aa6] Response is sent. Status: 200 OK. Message: x=2.25&y=1.53&r=3. Worktime: 4379523
+11:07:12.689 INFO  [lab2-server:24468] [trace=7fa70b88-c247-47ea-9954-10ea2abee3c6] POST method called
+11:07:12.689 DEBUG [lab2-server:24468] [trace=7fa70b88-c247-47ea-9954-10ea2abee3c6] {x=-0.77 y=-1.02 r=3}
+11:07:12.689 INFO  [lab2-server:24468] [trace=7fa70b88-c247-47ea-9954-10ea2abee3c6] Is the target hit?: true
+11:07:12.690 INFO  [lab2-server:24468] [trace=7fa70b88-c247-47ea-9954-10ea2abee3c6] Response is sent. Status: 200 OK. Message: x=-0.77&y=-1.02&r=3. Worktime: 1001166
+11:07:13.160 INFO  [lab2-server:24468] [trace=d4fd4d2e-8dba-43a9-b546-6120fa1ad20a] POST method called
+11:07:13.161 DEBUG [lab2-server:24468] [trace=d4fd4d2e-8dba-43a9-b546-6120fa1ad20a] {x=2.73 y=-1.5 r=3}
+11:07:13.161 INFO  [lab2-server:24468] [trace=d4fd4d2e-8dba-43a9-b546-6120fa1ad20a] Is the target hit?: false
+11:07:13.161 INFO  [lab2-server:24468] [trace=d4fd4d2e-8dba-43a9-b546-6120fa1ad20a] Response is sent. Status: 200 OK. Message: x=2.73&y=-1.5&r=3. Worktime: 1028247
+11:07:13.671 INFO  [lab2-server:24468] [trace=38e5b669-e667-43a7-8b39-0a04ca30bc45] POST method called
+11:07:13.672 DEBUG [lab2-server:24468] [trace=38e5b669-e667-43a7-8b39-0a04ca30bc45] {x=1.85 y=2.05 r=3}
+11:07:13.672 INFO  [lab2-server:24468] [trace=38e5b669-e667-43a7-8b39-0a04ca30bc45] Is the target hit?: false
+11:07:13.672 INFO  [lab2-server:24468] [trace=38e5b669-e667-43a7-8b39-0a04ca30bc45] Response is sent. Status: 200 OK. Message: x=1.85&y=2.05&r=3. Worktime: 993431
+11:12:52.719 INFO  [lab2-server:24468] [trace=469371c3-b7d9-41c2-a994-c75bcf25f5a2] GET method called
+11:12:52.721 INFO  [lab2-server:24468] [trace=469371c3-b7d9-41c2-a994-c75bcf25f5a2] 0 records are sent
+11:12:52.721 INFO  [lab2-server:24468] [trace=469371c3-b7d9-41c2-a994-c75bcf25f5a2] Response is sent. Status: 200 OK
+11:13:18.156 INFO  [lab2-server:24468] [trace=bd7b59eb-3593-4bc1-9110-3e3bfa6649b0] POST method called
+11:13:18.173 DEBUG [lab2-server:24468] [trace=bd7b59eb-3593-4bc1-9110-3e3bfa6649b0] {x=1.8 y=0.57 r=3}
+11:13:18.173 INFO  [lab2-server:24468] [trace=bd7b59eb-3593-4bc1-9110-3e3bfa6649b0] Is the target hit?: true
+11:13:18.179 INFO  [lab2-server:24468] [trace=bd7b59eb-3593-4bc1-9110-3e3bfa6649b0] Response is sent. Status: 200 OK. Message: x=1.8&y=0.57&r=3. Worktime: 16847419
+11:13:18.770 INFO  [lab2-server:24468] [trace=4250b7fe-f88f-4c73-9274-fd3e9620a736] POST method called
+11:13:18.771 DEBUG [lab2-server:24468] [trace=4250b7fe-f88f-4c73-9274-fd3e9620a736] {x=-0.65 y=0.78 r=3}
+11:13:18.771 INFO  [lab2-server:24468] [trace=4250b7fe-f88f-4c73-9274-fd3e9620a736] Is the target hit?: true
+11:13:18.772 INFO  [lab2-server:24468] [trace=4250b7fe-f88f-4c73-9274-fd3e9620a736] Response is sent. Status: 200 OK. Message: x=-0.65&y=0.78&r=3. Worktime: 1227032
+11:13:19.380 INFO  [lab2-server:24468] [trace=dec3890e-c596-4ee4-ba1e-c62d1033cea2] POST method called
+11:13:19.381 DEBUG [lab2-server:24468] [trace=dec3890e-c596-4ee4-ba1e-c62d1033cea2] {x=-0.22 y=-0.9 r=3}
+11:13:19.381 INFO  [lab2-server:24468] [trace=dec3890e-c596-4ee4-ba1e-c62d1033cea2] Is the target hit?: true
+11:13:19.382 INFO  [lab2-server:24468] [trace=dec3890e-c596-4ee4-ba1e-c62d1033cea2] Response is sent. Status: 200 OK. Message: x=-0.22&y=-0.9&r=3. Worktime: 1486264
+11:13:25.273 INFO  [lab2-server:24468] [trace=fa979e59-51f0-4a41-ae30-afc76d00bd2a] POST method called
+11:13:25.274 DEBUG [lab2-server:24468] [trace=fa979e59-51f0-4a41-ae30-afc76d00bd2a] {x=3.78 y=2.78 r=3}
+11:13:25.274 INFO  [lab2-server:24468] [trace=fa979e59-51f0-4a41-ae30-afc76d00bd2a] Is the target hit?: false
+11:13:25.275 INFO  [lab2-server:24468] [trace=fa979e59-51f0-4a41-ae30-afc76d00bd2a] Response is sent. Status: 200 OK. Message: x=3.78&y=2.78&r=3. Worktime: 984003
+11:13:26.452 INFO  [lab2-server:24468] [trace=ff15ae49-0599-4672-9c0f-0d9e353a2f0c] POST method called
+11:13:26.454 WARN  [lab2-server:24468] [trace=ff15ae49-0599-4672-9c0f-0d9e353a2f0c] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:13:51.590 INFO  [lab2-server:24468] [trace=de1cff4a-0389-4b84-a25e-2648b02a876f] POST method called
+11:13:51.591 WARN  [lab2-server:24468] [trace=de1cff4a-0389-4b84-a25e-2648b02a876f] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:14:39.399 INFO  [lab2-server:24468] [trace=42f957ce-87c1-41dd-8212-8fbf1894087b] POST method called
+11:14:39.399 DEBUG [lab2-server:24468] [trace=42f957ce-87c1-41dd-8212-8fbf1894087b] {x=1 y=0.5 r=3}
+11:14:39.399 INFO  [lab2-server:24468] [trace=42f957ce-87c1-41dd-8212-8fbf1894087b] Is the target hit?: true
+11:14:39.399 INFO  [lab2-server:24468] [trace=42f957ce-87c1-41dd-8212-8fbf1894087b] Response is sent. Status: 200 OK. Message: x=1&y=0.5&r=3. Worktime: 714032
+11:14:50.865 INFO  [lab2-server:24468] [trace=bef97550-e63a-4dca-879a-730f4c45f39b] POST method called
+11:14:50.865 DEBUG [lab2-server:24468] [trace=bef97550-e63a-4dca-879a-730f4c45f39b] {x=3 y=-1 r=3}
+11:14:50.865 INFO  [lab2-server:24468] [trace=bef97550-e63a-4dca-879a-730f4c45f39b] Is the target hit?: false
+11:14:50.866 INFO  [lab2-server:24468] [trace=bef97550-e63a-4dca-879a-730f4c45f39b] Response is sent. Status: 200 OK. Message: x=3&y=-1&r=3. Worktime: 710966
+11:15:07.812 INFO  [lab2-server:24468] [trace=dbf349b9-305f-4441-b297-2bd9f41d6c05] POST method called
+11:15:07.813 WARN  [lab2-server:24468] [trace=dbf349b9-305f-4441-b297-2bd9f41d6c05] Status: 400 Bad Request. Message: x must be number, have 0-2 digits after dot and ∈ [-5;5]
+11:15:26.688 INFO  [lab2-server:24468] [trace=472af25d-26de-4cd3-852d-d4a124db5c2c] POST method called
+11:15:26.689 WARN  [lab2-server:24468] [trace=472af25d-26de-4cd3-852d-d4a124db5c2c] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:15:38.695 INFO  [lab2-server:24468] [trace=fbb1fd97-b76a-42e6-afcc-ece7c0f7b523] POST method called
+11:15:38.696 WARN  [lab2-server:24468] [trace=fbb1fd97-b76a-42e6-afcc-ece7c0f7b523] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:15:48.055 INFO  [lab2-server:24468] [trace=cf5b87bc-c252-4887-a64e-0f1420fca900] POST method called
+11:15:48.055 WARN  [lab2-server:24468] [trace=cf5b87bc-c252-4887-a64e-0f1420fca900] Status: 400 Bad Request. Message: Some of x,y,r keys don't exist
+11:15:59.102 INFO  [lab2-server:24468] [trace=c5842d2b-621f-4ad5-b7ea-d767a65f6573] POST method called
+11:15:59.103 WARN  [lab2-server:24468] [trace=c5842d2b-621f-4ad5-b7ea-d767a65f6573] Status: 400 Bad Request. Message: The content must consist of key and value: x&1 -> x is key, 1 is value
+11:16:15.813 INFO  [lab2-server:24468] [trace=0c1683ae-6105-490d-a41c-5e51e2618182] POST method called
+11:16:15.814 WARN  [lab2-server:24468] [trace=0c1683ae-6105-490d-a41c-5e51e2618182] Status: 400 Bad Request. Message: URLDecoder: Illegal hex characters in escape (%) pattern - not a hexadecimal digit: "Z" = 90
+11:16:31.035 INFO  [lab2-server:24468] [trace=818321b4-73ec-4f46-9d80-aaa0b8d6f3ba] POST method called
+11:16:31.036 WARN  [lab2-server:24468] [trace=818321b4-73ec-4f46-9d80-aaa0b8d6f3ba] Status: 400 Bad Request. Message: Cannot parse null string
+11:16:40.167 INFO  [lab2-server:24468] [trace=a8a1946e-1959-460c-a0d5-1b2a6a71d440] PUT method called
+11:16:40.167 WARN  [lab2-server:24468] [trace=a8a1946e-1959-460c-a0d5-1b2a6a71d440] The only allowed methods are POST, GET and DELETE
+11:16:40.167 INFO  [lab2-server:24468] [trace=a8a1946e-1959-460c-a0d5-1b2a6a71d440] Response is sent. Status: 405 Method Not Allowed. Message: The only allowed methods are POST, GET and DELETE
+11:16:55.723 INFO  [lab2-server:24468] [trace=39dfa5e3-7c12-4478-a280-b2723903777f] POST method called
+11:16:55.724 DEBUG [lab2-server:24468] [trace=39dfa5e3-7c12-4478-a280-b2723903777f] {x=1 y=1 r=3}
+11:16:55.724 INFO  [lab2-server:24468] [trace=39dfa5e3-7c12-4478-a280-b2723903777f] Is the target hit?: true
+11:16:55.724 INFO  [lab2-server:24468] [trace=39dfa5e3-7c12-4478-a280-b2723903777f] Response is sent. Status: 200 OK. Message: x=1&y=1&r=3. Worktime: 713440
+11:22:03.180 INFO  [lab2-server:24468] [trace=b93b0c14-47fd-4539-a9e7-ed67c1fdb03f] GET method called
+11:22:03.183 INFO  [lab2-server:24468] [trace=b93b0c14-47fd-4539-a9e7-ed67c1fdb03f] 0 records are sent
+11:22:03.184 INFO  [lab2-server:24468] [trace=b93b0c14-47fd-4539-a9e7-ed67c1fdb03f] Response is sent. Status: 200 OK
+11:22:36.496 ERROR [lab2-server:24468] [trace=] Port is busy
+11:22:44.356 ERROR [lab2-server:24468] [trace=] Port is busy
+11:30:59.207 INFO  [lab2-server:24468] [trace=4d966f0e-97ca-4731-888c-e93432eb0ff7] GET method called
+11:30:59.211 INFO  [lab2-server:24468] [trace=4d966f0e-97ca-4731-888c-e93432eb0ff7] 0 records are sent
+11:30:59.211 INFO  [lab2-server:24468] [trace=4d966f0e-97ca-4731-888c-e93432eb0ff7] Response is sent. Status: 200 OK
+11:31:04.908 INFO  [lab2-server:24468] [trace=f0f6c7c7-380f-4f8f-bc29-b8a29a0a964b] POST method called
+11:31:04.936 DEBUG [lab2-server:24468] [trace=f0f6c7c7-380f-4f8f-bc29-b8a29a0a964b] {x=1.83 y=1.38 r=3}
+11:31:04.937 INFO  [lab2-server:24468] [trace=f0f6c7c7-380f-4f8f-bc29-b8a29a0a964b] Is the target hit?: true
+11:31:04.942 INFO  [lab2-server:24468] [trace=f0f6c7c7-380f-4f8f-bc29-b8a29a0a964b] Response is sent. Status: 200 OK. Message: x=1.83&y=1.38&r=3. Worktime: 28833355
+11:31:05.636 INFO  [lab2-server:24468] [trace=d25f5f22-d72a-4654-9b1a-9c7deded2a47] POST method called
+11:31:05.637 DEBUG [lab2-server:24468] [trace=d25f5f22-d72a-4654-9b1a-9c7deded2a47] {x=-0.87 y=0.33 r=3}
+11:31:05.638 INFO  [lab2-server:24468] [trace=d25f5f22-d72a-4654-9b1a-9c7deded2a47] Is the target hit?: true
+11:31:05.638 INFO  [lab2-server:24468] [trace=d25f5f22-d72a-4654-9b1a-9c7deded2a47] Response is sent. Status: 200 OK. Message: x=-0.87&y=0.33&r=3. Worktime: 1500199
+11:31:06.176 INFO  [lab2-server:24468] [trace=7f06e3a3-aa00-41b0-bfb3-e1fa4b6061d5] POST method called
+11:31:06.176 DEBUG [lab2-server:24468] [trace=7f06e3a3-aa00-41b0-bfb3-e1fa4b6061d5] {x=-0.67 y=-1.37 r=3}
+11:31:06.177 INFO  [lab2-server:24468] [trace=7f06e3a3-aa00-41b0-bfb3-e1fa4b6061d5] Is the target hit?: true
+11:31:06.177 INFO  [lab2-server:24468] [trace=7f06e3a3-aa00-41b0-bfb3-e1fa4b6061d5] Response is sent. Status: 200 OK. Message: x=-0.67&y=-1.37&r=3. Worktime: 1386313
+11:32:28.753 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:32:54.337 INFO  [lab2-server:24468] [trace=1970f0eb-7be7-420f-a627-d8a5291c8bd4] POST method called
+11:32:54.338 WARN  [lab2-server:24468] [trace=1970f0eb-7be7-420f-a627-d8a5291c8bd4] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:32:54.345 INFO  [lab2-server:24468] [trace=9f479326-fe65-4946-9f46-f663bac497d4] POST method called
+11:32:54.346 WARN  [lab2-server:24468] [trace=9f479326-fe65-4946-9f46-f663bac497d4] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:32:54.507 INFO  [lab2-server:24468] [trace=738d7436-013f-414f-9c2c-c9a0a51b2dcd] POST method called
+11:32:54.508 WARN  [lab2-server:24468] [trace=738d7436-013f-414f-9c2c-c9a0a51b2dcd] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:32:54.509 INFO  [lab2-server:24468] [trace=711948fe-231a-4b4a-8c18-0764869cdfb9] POST method called
+11:32:54.509 WARN  [lab2-server:24468] [trace=711948fe-231a-4b4a-8c18-0764869cdfb9] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:32:54.510 INFO  [lab2-server:24468] [trace=69e590f4-853e-4fa3-8178-7d76241cbcae] POST method called
+11:32:54.510 DEBUG [lab2-server:24468] [trace=69e590f4-853e-4fa3-8178-7d76241cbcae] {x=-1 y=2.68 r=3}
+11:32:54.510 INFO  [lab2-server:24468] [trace=69e590f4-853e-4fa3-8178-7d76241cbcae] Is the target hit?: false
+11:32:54.510 INFO  [lab2-server:24468] [trace=69e590f4-853e-4fa3-8178-7d76241cbcae] Response is sent. Status: 200 OK. Message: x=-1&y=2.68&r=3. Worktime: 576220
+11:32:55.826 INFO  [lab2-server:24468] [trace=343585c1-dae1-4db6-af1a-cea5368d726b] POST method called
+11:32:55.827 WARN  [lab2-server:24468] [trace=343585c1-dae1-4db6-af1a-cea5368d726b] Status: 400 Bad Request. Message: x and y must ∈ [-5;5], r must ∈ {1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0}
+11:33:24.815 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:35:54.419 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:40:08.005 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:41:12.199 INFO  [lab2-server:24468] [trace=test-trace-123] POST method called
+11:41:12.215 DEBUG [lab2-server:24468] [trace=test-trace-123] {x=1 y=1 r=3}
+11:41:12.216 INFO  [lab2-server:24468] [trace=test-trace-123] Is the target hit?: true
+11:41:12.222 INFO  [lab2-server:24468] [trace=test-trace-123] Response is sent. Status: 200 OK. Message: x=1&y=1&r=3. Worktime: 17399830
+11:42:48.774 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:44:01.965 INFO  [lab2-server:24468] [trace=7c95a79c-5285-478e-8a78-19c9de234314] GET method called
+11:44:01.968 INFO  [lab2-server:24468] [trace=7c95a79c-5285-478e-8a78-19c9de234314] 0 records are sent
+11:44:01.968 INFO  [lab2-server:24468] [trace=7c95a79c-5285-478e-8a78-19c9de234314] Response is sent. Status: 200 OK
+11:44:03.703 INFO  [lab2-server:24468] [trace=2cb7817e-5f0b-4c2c-bfe5-8e7f2c0e920d] POST method called
+11:44:03.721 DEBUG [lab2-server:24468] [trace=2cb7817e-5f0b-4c2c-bfe5-8e7f2c0e920d] {x=1.6 y=2.35 r=3}
+11:44:03.721 INFO  [lab2-server:24468] [trace=2cb7817e-5f0b-4c2c-bfe5-8e7f2c0e920d] Is the target hit?: false
+11:44:03.726 INFO  [lab2-server:24468] [trace=2cb7817e-5f0b-4c2c-bfe5-8e7f2c0e920d] Response is sent. Status: 200 OK. Message: x=1.6&y=2.35&r=3. Worktime: 18340941
+11:44:04.292 INFO  [lab2-server:24468] [trace=a8c8ccd0-d25c-49fc-be9c-da67d5af1230] POST method called
+11:44:04.292 DEBUG [lab2-server:24468] [trace=a8c8ccd0-d25c-49fc-be9c-da67d5af1230] {x=-0.5 y=-0.75 r=3}
+11:44:04.292 INFO  [lab2-server:24468] [trace=a8c8ccd0-d25c-49fc-be9c-da67d5af1230] Is the target hit?: true
+11:44:04.293 INFO  [lab2-server:24468] [trace=a8c8ccd0-d25c-49fc-be9c-da67d5af1230] Response is sent. Status: 200 OK. Message: x=-0.5&y=-0.75&r=3. Worktime: 957161
+11:44:04.761 INFO  [lab2-server:24468] [trace=cd0d81fb-fc6b-42f7-a28a-183ed91346f8] POST method called
+11:44:04.762 DEBUG [lab2-server:24468] [trace=cd0d81fb-fc6b-42f7-a28a-183ed91346f8] {x=2.63 y=0.78 r=3}
+11:44:04.762 INFO  [lab2-server:24468] [trace=cd0d81fb-fc6b-42f7-a28a-183ed91346f8] Is the target hit?: true
+11:44:04.762 INFO  [lab2-server:24468] [trace=cd0d81fb-fc6b-42f7-a28a-183ed91346f8] Response is sent. Status: 200 OK. Message: x=2.63&y=0.78&r=3. Worktime: 553888
+11:44:05.412 INFO  [lab2-server:24468] [trace=d5d41467-8743-41c8-8cf7-5d9383793234] DELETE method called
+11:44:05.413 INFO  [lab2-server:24468] [trace=d5d41467-8743-41c8-8cf7-5d9383793234] 3 records deleted
+11:44:05.413 INFO  [lab2-server:24468] [trace=d5d41467-8743-41c8-8cf7-5d9383793234] Response is sent. Status: 200 OK. Message: The set of dots is cleared
+11:44:29.620 ERROR [lab2-server:24468] [trace=] FCGIaccept is failed, server stops. Mb port is busy
+11:49:47.284 INFO  [lab2-server:24468] [trace=] Server started on port: 24468
+11:51:18.061 INFO  [lab2-server:24468] [trace=d7f82271-9868-4653-859d-ac075fdf7f58] POST method called
+11:51:18.075 DEBUG [lab2-server:24468] [trace=d7f82271-9868-4653-859d-ac075fdf7f58] {x=1 y=0.73 r=3}
+11:51:18.076 INFO  [lab2-server:24468] [trace=d7f82271-9868-4653-859d-ac075fdf7f58] Is the target hit?: true
+11:51:18.082 INFO  [lab2-server:24468] [trace=d7f82271-9868-4653-859d-ac075fdf7f58] Response is sent. Status: 200 OK. Message: x=1&y=0.73&r=3. Worktime: 26229706
+11:51:18.590 INFO  [lab2-server:24468] [trace=ca0d29af-a1d2-4c46-bbee-f925c93b30c2] POST method called
+11:51:18.591 DEBUG [lab2-server:24468] [trace=ca0d29af-a1d2-4c46-bbee-f925c93b30c2] {x=-0.82 y=0.23 r=3}
+11:51:18.591 INFO  [lab2-server:24468] [trace=ca0d29af-a1d2-4c46-bbee-f925c93b30c2] Is the target hit?: true
+11:51:18.591 INFO  [lab2-server:24468] [trace=ca0d29af-a1d2-4c46-bbee-f925c93b30c2] Response is sent. Status: 200 OK. Message: x=-0.82&y=0.23&r=3. Worktime: 1080525
+11:51:19.097 INFO  [lab2-server:24468] [trace=a30dc3f8-0e9e-47f7-8614-fbec7b5383a3] POST method called
+11:51:19.098 DEBUG [lab2-server:24468] [trace=a30dc3f8-0e9e-47f7-8614-fbec7b5383a3] {x=-0.82 y=-1 r=3}
+11:51:19.098 INFO  [lab2-server:24468] [trace=a30dc3f8-0e9e-47f7-8614-fbec7b5383a3] Is the target hit?: true
+11:51:19.099 INFO  [lab2-server:24468] [trace=a30dc3f8-0e9e-47f7-8614-fbec7b5383a3] Response is sent. Status: 200 OK. Message: x=-0.82&y=-1&r=3. Worktime: 1304448

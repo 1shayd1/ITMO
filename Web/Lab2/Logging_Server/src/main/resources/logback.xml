@@ -1,0 +1,14 @@
+<configuration>
+    <property name="SERVICE" value="lab2-server"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/server.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [${SERVICE}:${FCGI_PORT}] [trace=%X{traceId}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

@@ -104,7 +104,7 @@ function drawPage() {
         const checkY = parseFloat(checkY_1);
 
         if (!correctNumber(checkY)) {
-            errorMessage.textContent = 'Y must ∈ (-5;3)';
+            errorMessage.textContent = 'Y must ∈ (-5;5)';
             simpleDraw()
             return;
         }
