@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="m68k-harv-microcode" id="m68kharv">
-    <mxGraphModel dx="1170" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1357" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -134,9 +134,6 @@
         </mxCell>
         <mxCell id="c48" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;align=left;" value="PC" vertex="1">
           <mxGeometry height="14" width="20" x="222" y="812" as="geometry" />
-        </mxCell>
-        <mxCell id="c49" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontSize=9;" value="0 / 1 / 4" vertex="1">
-          <mxGeometry height="14" width="50" x="550" y="812" as="geometry" />
         </mxCell>
         <mxCell id="c50" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#ffffff;align=center;fillColor=#0050ef;strokeColor=#001DBC;" value="sel_l" vertex="1">
           <mxGeometry height="16" width="30" x="242" y="840" as="geometry" />
@@ -483,12 +480,6 @@
             </Array>
             <mxPoint x="115" y="546" as="sourcePoint" />
             <mxPoint x="300" y="850" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e41" edge="1" parent="1" style="endArrow=block;endSize=5;endFill=1;html=1;rounded=0;strokeWidth=1.5;edgeStyle=none;jumpStyle=arc;jumpSize=8;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="575" y="828" as="sourcePoint" />
-            <mxPoint x="575" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e42" edge="1" parent="1" source="c24" style="endArrow=block;endSize=5;endFill=1;html=1;rounded=0;strokeWidth=1.5;edgeStyle=none;jumpStyle=arc;jumpSize=8;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.226;entryY=0.959;entryDx=0;entryDy=0;entryPerimeter=0;" target="c47">
