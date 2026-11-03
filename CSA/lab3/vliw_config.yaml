@@ -1,0 +1,11 @@
+limit: 1000
+memory_size: 0x1000
+memory_mapped_io:
+  0x80: [2, 1, 0, 0, 1, 5, 6, 2, 3, 4, 5, 1, -1]
+  0x84: []
+reports:
+  - name: Step-by-step
+    slice: all
+    view: |
+      {pc}: {instruction:prev}
+      N={s1:dec} a={a0:dec} b={a1:dec} c={a2:dec} d={a3:dec} x={a4:dec} y={a5:dec}
