@@ -1,3 +1,9 @@
+    .data
+input_addr:  .word 0x80
+output_addr: .word 0x84
+overflow:    .word 0xCCCCCCCC
+buffer_addr: .word 0x18f
+
     .text
     .org 0x88
 
@@ -50,10 +56,11 @@ _start:
                 end
             end
 
-            local.get $pos i32.const 63 i32.gt_s
+            local.get $pos i32.const buffer_addr i32.load
+            i32.sub i32.const 63 i32.gt_s
             br_if 0                                         
 
-            i32.const 0 local.set $curr                    
+            i32.const buffer_addr i32.load local.set $curr                    
             loop                                               
                 local.get $out local.get $curr i32.load8_u i32.store8
                 local.get $curr i32.const 1 i32.add local.tee $curr    
@@ -65,11 +72,4 @@ _start:
 
         local.get $out i32.const overflow i32.load i32.store     
     end
-    halt                                              
-
-    .data
-input_addr:  .word 0x80
-output_addr: .word 0x84
-buffer_addr: .word 0x0
-overflow:    .word 0xCCCCCCCC
-
+    halt 
