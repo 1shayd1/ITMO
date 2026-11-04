@@ -10,26 +10,19 @@ overflow_value:      .word 0xCCCCCCCC
 _start:
     lui s1, %hi(input_addr) / / /                                 ; адрес порта ввода
     addi s1, s1, %lo(input_addr) / / /
-    / / lw s1, 0(s1) /
+    lui s5, %hi(minus_one)/ lui s2, %hi(output_addr) / lw s1, 0(s1) /
 
-    lui s5, %hi(minus_one) / / lw s4, 0(s1) /                     ; загружаем n
-    addi s5, s5, %lo(minus_one) / / /
-    / / lw s5, 0(s5) /                                            ; загружаем -1
+    addi s5, s5, %lo(minus_one) / addi s2, s2, %lo(output_addr) / lw s4, 0(s1) /    
+    lui s6, %hi(shift)/ / lw s5, 0(s5) / blt s4, zero, fail_n
+    addi s6, s6, %lo(shift) / / lw s2, 0(s2) / blt s4, zero,fail_n          
 
-    lui s2, %hi(output_addr) / / / j second_part                  ; адрес порта вывода
+    / / lw s6, 0(s6) / j loop
 
     .text
-    .org 0x88
-second_part:
-    addi s2, s2, %lo(output_addr) / / /
-    / / lw s2, 0(s2) /
-
-    lui s6, %hi(shift) / / / blt s4, zero, fail_n             
-    addi s6, s6, %lo(shift) / / / beqz s4, end_loop              
-    / / lw s6, 0(s6) /                                             
+    .org 0x88                                    
 
 loop:
-    / / lw a0, 0(s1) /                                            ; a
+    / / lw a0, 0(s1) / beqz s4, end_loop                          ; a
     / / lw a1, 0(s1) /                                            ; b
     / / lw a2, 0(s1) /                                            ; c
     / / lw a3, 0(s1) /                                            ; d
