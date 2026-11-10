@@ -1,5 +1,6 @@
 package org.shaydi;
 
+import jakarta.servlet.DispatcherType;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,6 +23,12 @@ public class AreaCheckServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         long start = System.nanoTime();
+
+        if (req.getDispatcherType() != DispatcherType.FORWARD) {
+            String query = req.getQueryString();
+            resp.sendRedirect(req.getContextPath() + "/controller" + (query != null ? "?" + query : ""));
+            return;
+        }
 
         double x, y, r;
         try {

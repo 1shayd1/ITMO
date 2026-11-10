@@ -16,13 +16,13 @@ public class ControllerServlet extends HttpServlet {
         if ("true".equals(req.getParameter("clear"))) {
             ResultBean bean = (ResultBean) req.getSession().getAttribute("resultBean");
             if (bean != null) bean.clear();
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
             return;
         }
         if (hasCoordinates(req)) {
             req.getRequestDispatcher("/areaCheck").forward(req, resp);
         } else {
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
         }
     }
 
