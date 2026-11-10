@@ -13,6 +13,12 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if ("true".equals(req.getParameter("clear"))) {
+            ResultBean bean = (ResultBean) req.getSession().getAttribute("resultBean");
+            if (bean != null) bean.clear();
+            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            return;
+        }
         if (hasCoordinates(req)) {
             req.getRequestDispatcher("/areaCheck").forward(req, resp);
         } else {

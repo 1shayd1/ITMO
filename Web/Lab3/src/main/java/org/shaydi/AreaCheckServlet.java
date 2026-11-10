@@ -1,6 +1,5 @@
 package org.shaydi;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,6 +11,7 @@ import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 
 @WebServlet("/areaCheck")
 public class AreaCheckServlet extends HttpServlet {
@@ -20,7 +20,7 @@ public class AreaCheckServlet extends HttpServlet {
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         long start = System.nanoTime();
 
         double x, y, r;
@@ -74,11 +74,18 @@ public class AreaCheckServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'>");
         out.println("<link rel='stylesheet' href='styles.css'><title>Result</title></head><body>");
-        out.println("<table><tr><th>X</th><th>Y</th><th>R</th><th>Result</th></tr>");
-        out.printf("<tr><td>%.2f</td><td>%.2f</td><td>%.0f</td><td>%s</td></tr>%n",
-                res.getX(), res.getY(), res.getR(), res.getHit() ? "Hit" : "Miss");
+        out.println("<header>Shalabodov Yaroslav Dmitrievich, Р3210, Variant 32452</header>");
+        out.println("<div class='result-card'>");
+        out.println("<table class='result-table'>");
+        out.printf(Locale.US, "<tr><th>X</th><td>%.2f</td></tr>%n", res.getX());
+        out.printf(Locale.US, "<tr><th>Y</th><td>%.2f</td></tr>%n", res.getY());
+        out.printf(Locale.US, "<tr><th>R</th><td>%.0f</td></tr>%n", res.getR());
+        out.printf("<tr><th>Result</th><td class='%s'>%s</td></tr>%n",
+                res.getHit() ? "hit" : "miss", res.getHit() ? "Hit" : "Miss");
+        out.printf("<tr><th>Time</th><td>%s</td></tr>%n", res.getTime());
+        out.printf("<tr><th>Working time</th><td>%d</td></tr>%n", res.getWorkTime());
         out.println("</table>");
-        out.println("<a href='controller'>Back to form</a>");
-        out.println("</body></html>");
+        out.println("<a class='back-link' href='controller'>← Back to form</a>");
+        out.println("</div></body></html>");
     }
 }

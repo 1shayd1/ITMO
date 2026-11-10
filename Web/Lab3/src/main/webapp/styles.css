@@ -3,6 +3,9 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    margin: 0;
+    font-family: serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -29,94 +32,85 @@ header {
     flex: 1;
 }
 
-.input-section {
-    display: flex;
-    gap: 10px;
-}
-
-.input-left {
-    flex: 0.55;
+.input-block {
     border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.input-left form > div:first-child {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    align-items: center;
-}
-
-.input-left label[for="x-select"] {
-    grid-column: 1;
-    grid-row: 1;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.input-left #x-select {
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 30px;
-}
-
-.input-left label[for="y-text"] {
-    grid-column: 2;
-    grid-row: 1;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.input-left #y-text {
-    grid-column: 2;
-    grid-row: 2;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 30px;
-}
-
-.input-left button {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-}
-
-#y-error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    grid-column: 2;
-}
-
-.input-right {
-    flex: 0.45;
-    border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-#r-label {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-}
-
-.first-row, .second-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.input-block > div {
+    display: flex;
     align-items: center;
-    justify-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.input-block > div > span,
+.input-block label {
+    font-weight: bold;
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.x-btn {
+    width: 38px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f7f7f7;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.x-btn:hover {
+    background: #e6f2ff;
+}
+
+.x-btn.active {
+    background: #1E90FF;
+    border-color: #1E90FF;
+    color: white;
+}
+
+#y-text,
+#r-select {
+    height: 32px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#y-text {
+    flex: 1;
+    max-width: 240px;
+}
+
+#r-select {
+    width: 90px;
+}
+
+.input-block button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f7f7f7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-block button[type="submit"]:hover {
+    background: #e6f2ff;
+}
+
+#error {
+    color: red;
+    font-size: 13px;
+    min-height: 16px;
 }
 
 .canvas-section {
@@ -129,12 +123,16 @@ header {
     box-sizing: border-box;
 }
 
+#canvas {
+    cursor: crosshair;
+}
+
 .table-right {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 650px;
+    max-height: 700px;
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
@@ -152,7 +150,8 @@ header {
     text-align: center;
 }
 
-.table-right th, .table-right td {
+.table-right th,
+.table-right td {
     border: 1px solid #ccc;
     padding: 8px 12px;
 }
@@ -167,12 +166,65 @@ header {
 
 .table-right caption {
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-#clear-button {
+.result-card {
     width: 100%;
+    max-width: 420px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     box-sizing: border-box;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+}
+
+.result-table th {
+    background: #f2f2f2;
+    text-align: left;
+    width: 40%;
+}
+
+.hit {
+    color: #00AA00;
+    font-weight: bold;
+}
+
+.miss {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.back-link {
+    text-align: center;
     padding: 8px;
-    flex-shrink: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f7f7f7;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background: #e6f2ff;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
 }

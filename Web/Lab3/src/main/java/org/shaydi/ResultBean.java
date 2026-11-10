@@ -17,4 +17,8 @@ public class ResultBean implements Serializable {
     public List<Result> getResults() {
         return results;
     }
+
+    public void clear(){
+        results.clear();
+    }
 }

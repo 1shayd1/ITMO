@@ -1,127 +1,79 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="script.js"></script>
-    <title>Web Lab 2</title>
+    <title>Web Lab 3</title>
 </head>
-
 <body>
-    <header>
-        Shalabodov Yaroslav Dmitrievich, Р3110, Variant 888
-    </header>
+<header>
+    Shalabodov Yaroslav Dmitrievich, Р3210, Variant 32452
+</header>
 
-    <div class="main">
-        <div class="left-section">
-            <div class="input-section">
-                <div class="input-left">
-                    <form class="input-block">
-                        <div>
-                            <label for="x-select">Field Х</label>
-                            <select id="x-select">
-                                <option value="-3" selected>-3</option>
-                                <option value="-2">-2</option>
-                                <option value="-1">-1</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-
-                            <label for="y-text">Field Y</label>
-                            <input type="text" id="y-text" placeholder="enter Y ∈ (-5...5)"/>
-
-                            <button type="submit">Check</button>
-                        </div>
-
-                        <div>
-                            <div id="y-error"></div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="input-right">
-                    <div>
-                        <label id="r-label">Field R</label>
-                    </div>
-
-                    <div class="first-row">
-                        <div>
-                            <input type="radio" id="r-1-5" name="radio" value="1.5"/>
-                            <label for="r-1-5">1.5</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-2" name="radio" value="2"/>
-                            <label for="r-2">2.0</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-2-5" name="radio" value="2.5"/>
-                            <label for="r-2-5">2.5</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-3" name="radio" value="3" checked/>
-                            <label for="r-3">3.0</label>
-                        </div>
-                    </div>
-
-                    <div class="second-row">
-                        <div>
-                            <input type="radio" id="r-3-5" name="radio" value="3.5"/>
-                            <label for="r-3-5">3.5</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-4" name="radio" value="4"/>
-                            <label for="r-4">4.0</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-4-5" name="radio" value="4.5" />
-                            <label for="r-4-5">4.5</label>
-                        </div>
-
-                        <div>
-                            <input type="radio" id="r-5" name="radio" value="5"/>
-                            <label for="r-5">5.0</label>
-                        </div>
-                    </div>
-                </div>
+<div class="main">
+    <div class="left-section">
+        <form class="input-block" action="controller" method="get">
+            <div>
+                <span>Field X</span>
+                <c:forEach var="i" begin="0" end="8">
+                    <button type="button" class="x-btn" value="${i - 4}">${i - 4}</button>
+                </c:forEach>
+                <input type="hidden" name="x" id="x-input">
             </div>
 
-            <div class="canvas-section">
-                <canvas height="460" width="460" id="canvas"></canvas>
-            </div>
-        </div>
-
-        <div class="table-right">
-            <div class="table-scroll">
-                <table>
-                    <caption>Target shot stats</caption>
-                    <thead>
-                    <tr>
-                        <th scope="col">X</th>
-                        <th scope="col">Y</th>
-                        <th scope="col">R</th>
-                        <th scope="col">Is Hit</th>
-                        <th scope="col">Date, Time</th>
-                        <th scope="col">Working Time</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            <div>
+                <label for="y-text">Field Y</label>
+                <input type="text" id="y-text" name="y" placeholder="Y ∈ (-5; 5)">
             </div>
 
-            <button type="button" id="clear-button">Clear table</button>
+            <div>
+                <label for="r-select">Field R</label>
+                <select id="r-select" name="r">
+                    <option value="1.0">1.0</option>
+                    <option value="2.0">2.0</option>
+                    <option value="3.0" selected>3.0</option>
+                    <option value="4.0">4.0</option>
+                    <option value="5.0">5.0</option>
+                </select>
+            </div>
+
+            <button type="submit">Check</button>
+            <div id="error"></div>
+        </form>
+
+        <div class="canvas-section">
+            <canvas height="460" width="460" id="canvas"></canvas>
         </div>
     </div>
 
+    <div class="table-right">
+        <div class="table-scroll">
+            <table>
+                <caption>Target shot stats</caption>
+                <thead>
+                <tr>
+                    <th>X</th><th>Y</th><th>R</th><th>Is Hit</th><th>Date, Time</th><th>Working Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="res" items="${resultBean.results}">
+                    <tr data-x="${res.x}" data-y="${res.y}" data-r="${res.r}" data-hit="${res.hit}">
+                        <td>${res.x}</td>
+                        <td>${res.y}</td>
+                        <td>${res.r}</td>
+                        <td>${res.hit}</td>
+                        <td>${res.time}</td>
+                        <td>${res.workTime}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+        <a class="back-link" href="controller?clear=true">Clear table</a>
+    </div>
+</div>
 </body>
 </html>

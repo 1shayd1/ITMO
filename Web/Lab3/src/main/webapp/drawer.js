@@ -1,158 +1,125 @@
-export function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r, X, Y, startAngle, endAngle) {
+const FILL = "#00FFFF";
+const STROKE = "#1E90FF";
+const AXIS = "#1A202C";
 
+export function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r, X, Y) {
     ctx.clearRect(0, 0, width, height);
 
-    drawFigures(ctx, centerX, centerY, r, startAngle, endAngle);
-
+    drawFigures(ctx, centerX, centerY, r);
     drawAxes(ctx, width, height, arrowLength, centerX, centerY);
-
-    drawFigureLines(ctx, centerX, centerY, r, startAngle, endAngle);
-
-    drawStripes(ctx, centerX, centerY, arrowLength);
-
+    drawStripes(ctx, width, height, centerX, centerY, arrowLength);
     drawCenterDot(ctx, centerX, centerY);
-
     drawText(ctx, centerX, centerY, r, width);
-
     drawDot(ctx, X, Y);
 }
 
-function drawFigures(ctx, centerX, centerY, r, startAngle, endAngle) {
-    //circle-quater
+function figuresPath(ctx, centerX, centerY, r) {
     ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.arc(centerX, centerY, r, startAngle, endAngle, false);
+    ctx.rect(centerX - r / 2, centerY - r, r / 2, r);
 
-    ctx.fillStyle = "#00FFFF";
+    // triangle
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(centerX - r / 2, centerY);
+    ctx.lineTo(centerX, centerY + r / 2);
+    ctx.closePath();
+
+    // circle quater
+    ctx.moveTo(centerX, centerY);
+    ctx.arc(centerX, centerY, r, 0, Math.PI / 2, false);
+    ctx.closePath();
+}
+
+function drawFigures(ctx, centerX, centerY, r) {
+    figuresPath(ctx, centerX, centerY, r);
+    ctx.fillStyle = FILL;
     ctx.fill();
 
-    //triange
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX, centerY -r/2);
-    ctx.lineTo(centerX - r, centerY);
-
-    ctx.fillStyle = "#00FFFF";
-    ctx.fill();
-
-    //rectangle
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + r, centerY);
-    ctx.lineTo(centerX + r, centerY - r/2);
-    ctx.lineTo(centerX, centerY - r/2);
-
-    ctx.fillStyle = "#00FFFF";
-    ctx.fill();
+    figuresPath(ctx, centerX, centerY, r);
+    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = STROKE;
+    ctx.stroke();
 }
 
 function drawAxes(ctx, width, height, arrowLength, centerX, centerY) {
-    //Ox
+    ctx.strokeStyle = AXIS;
+    ctx.fillStyle = AXIS;
+    ctx.lineWidth = 1.5;
+
+    // Ox
     ctx.beginPath();
     ctx.moveTo(0, centerY);
     ctx.lineTo(width, centerY);
-    ctx.strokeStyle = '#1A202C';
-    ctx.lineWidth = 1.5;
     ctx.stroke();
 
     ctx.beginPath();
     ctx.moveTo(width, centerY);
-    ctx.lineTo(width - 2*arrowLength, centerY - arrowLength);
-    ctx.lineTo(width - 2*arrowLength, centerY + arrowLength);
-    ctx.fillStyle = "#1A202C";
+    ctx.lineTo(width - 2 * arrowLength, centerY - arrowLength);
+    ctx.lineTo(width - 2 * arrowLength, centerY + arrowLength);
     ctx.fill();
 
-    //Oy
+    // Oy
     ctx.beginPath();
     ctx.moveTo(centerX, height);
     ctx.lineTo(centerX, 0);
-    ctx.strokeStyle = '#1A202C';
-    ctx.lineWidth = 1.5;
     ctx.stroke();
 
     ctx.beginPath();
     ctx.moveTo(centerX, 0);
-    ctx.lineTo(centerX - arrowLength, 2*arrowLength);
-    ctx.lineTo(centerX + arrowLength, 2*arrowLength);
-    ctx.fillStyle = "#1A202C";
+    ctx.lineTo(centerX - arrowLength, 2 * arrowLength);
+    ctx.lineTo(centerX + arrowLength, 2 * arrowLength);
     ctx.fill();
 }
 
-function drawFigureLines(ctx, centerX, centerY, r, startAngle, endAngle) {
-
-    ctx.lineWidth = 2.5;
-    ctx.strokeStyle = "#1E90FF";
-
+function drawStripes(ctx, width, height, centerX, centerY, arrowLength) {
+    ctx.strokeStyle = AXIS;
+    ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX, centerY - r/2);
-    ctx.lineTo(centerX - r, centerY);
-    ctx.stroke()
 
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + r, centerY);
-    ctx.lineTo(centerX + r, centerY - r/2);
-    ctx.lineTo(centerX, centerY - r/2);
-    ctx.stroke()
-
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY);
-    ctx.arc(centerX, centerY, r, startAngle, endAngle, false);
-    ctx.lineTo(centerX, centerY);
+    for (let x = centerX % 40; x < width - 2 * arrowLength; x += 40) {
+        ctx.moveTo(x, centerY - arrowLength);
+        ctx.lineTo(x, centerY + arrowLength);
+    }
+    for (let y = centerY % 40 + 40; y < height; y += 40) {
+        ctx.moveTo(centerX - arrowLength, y);
+        ctx.lineTo(centerX + arrowLength, y);
+    }
     ctx.stroke();
 }
 
-function drawStripes(ctx, centerX, centerY, arrowLength) {
-    for (let i = 0; i <= 11; i++) {
-        ctx.beginPath();
-        ctx.moveTo(30 + 40 * i, centerY);
-        ctx.lineTo(30 + 40 * i, centerY - arrowLength);
-        ctx.lineTo(30 + 40 * i, centerY + arrowLength);
-
-        ctx.moveTo(centerX, 30 + 40 * i);
-        ctx.lineTo(centerX - arrowLength, 30 + 40 * i);
-        ctx.lineTo(centerX + arrowLength, 30 + 40 * i);
-
-        ctx.strokeStyle = '#1A202C';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-        ctx.closePath();
-    }
-}
-
 function drawCenterDot(ctx, centerX, centerY) {
-    //center dot
     ctx.beginPath();
     ctx.arc(centerX, centerY, 2.5, 0, Math.PI * 2);
-    ctx.fillStyle = "#1A202C";
+    ctx.fillStyle = AXIS;
     ctx.fill();
 }
 
 function drawText(ctx, centerX, centerY, r, width) {
-    //X
+    ctx.fillStyle = AXIS;
     ctx.font = "15px Trebuchet MS";
-    ctx.fillStyle = "#1A202C";
-    ctx.fillText("X", width - 10, centerY + 20);
 
-    //Y
-    ctx.font = "15px Trebuchet MS";
-    ctx.fillStyle = "#1A202C";
-    ctx.fillText("Y", centerX + 10, 13);
+    ctx.textAlign = "left";
+    ctx.textBaseline = "alphabetic";
+    ctx.fillText("X", width - 12, centerY + 22);
+    ctx.fillText("Y", centerX + 10, 14);
 
-    //R
-    ctx.font = "15px Trebuchet MS";
-    ctx.fillStyle = "#1A202C";
+    ctx.font = "13px Trebuchet MS";
     ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.fillText("-R",   centerX - r,     centerY + 8);
+    ctx.fillText("-R/2", centerX - r / 2, centerY + 8);
+    ctx.fillText("R/2",  centerX + r / 2, centerY + 8);
+    ctx.fillText("R",    centerX + r,     centerY + 8);
+
+    ctx.textAlign = "left";
     ctx.textBaseline = "middle";
-    ctx.fillText("R", centerX + r, centerY + 13);
-    ctx.fillText("R", centerX - r, centerY + 13);
-    ctx.fillText("R", centerX - 13, centerY - r);
-    ctx.fillText("R", centerX - 13, centerY + r);
+    ctx.fillText("R",    centerX + 8, centerY - r);
+    ctx.fillText("R/2",  centerX + 8, centerY - r / 2);
+    ctx.fillText("-R/2", centerX + 8, centerY + r / 2);
+    ctx.fillText("-R",   centerX + 8, centerY + r);
 }
 
 function drawDot(ctx, X, Y) {
-    if (Y !== null && X != null) {
+    if (X !== null && Y !== null) {
         ctx.beginPath();
         ctx.arc(X, Y, 2, 0, Math.PI * 2);
         ctx.fillStyle = "#FF0000";
