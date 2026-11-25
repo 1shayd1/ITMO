@@ -19,6 +19,7 @@ public class ControllerServlet extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
             return;
         }
+
         if (hasCoordinates(req)) {
             req.getRequestDispatcher("/areaCheck").forward(req, resp);
         } else {

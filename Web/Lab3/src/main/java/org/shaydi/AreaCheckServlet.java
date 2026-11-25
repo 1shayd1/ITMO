@@ -1,6 +1,7 @@
 package org.shaydi;
 
 import jakarta.servlet.DispatcherType;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -8,11 +9,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Locale;
 
 @WebServlet("/areaCheck")
 public class AreaCheckServlet extends HttpServlet {
@@ -21,7 +20,7 @@ public class AreaCheckServlet extends HttpServlet {
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         long start = System.nanoTime();
 
         if (req.getDispatcherType() != DispatcherType.FORWARD) {
@@ -58,12 +57,14 @@ public class AreaCheckServlet extends HttpServlet {
         }
         bean.addResult(result);
 
-        renderPage(resp, result);
+        req.setAttribute("result", result);
+        req.getRequestDispatcher("/WEB-INF/result.jsp").forward(req, resp);
     }
 
 
     private boolean isValid(double x, double y, double r) {
-        boolean xOk = (-5 <= x) && (x < 5);
+        boolean xOk = (-5
+         <= x) && (x < 5);
         boolean yOk = (-5 < y) && (y < 5);
         boolean rOk = rOkay.contains(r);
         return xOk && yOk && rOk;
@@ -73,26 +74,5 @@ public class AreaCheckServlet extends HttpServlet {
         return ((x*x + y*y <= r*r) && x >= 0 && y <=0) ||       // quater of circle
                 (x <= 0 && y >= 0 && x >= -r/2 && y <= r) ||    // rectangle
                 (x <= 0 && y <= 0 && y >= -x - r/2);            // triangle
-    }
-
-
-    private void renderPage(HttpServletResponse resp, Result res) throws IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
-        out.println("<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'>");
-        out.println("<link rel='stylesheet' href='styles.css'><title>Result</title></head><body>");
-        out.println("<header>Shalabodov Yaroslav Dmitrievich, Р3210, Variant 32452</header>");
-        out.println("<div class='result-card'>");
-        out.println("<table class='result-table'>");
-        out.printf(Locale.US, "<tr><th>X</th><td>%.2f</td></tr>%n", res.getX());
-        out.printf(Locale.US, "<tr><th>Y</th><td>%.2f</td></tr>%n", res.getY());
-        out.printf(Locale.US, "<tr><th>R</th><td>%.0f</td></tr>%n", res.getR());
-        out.printf("<tr><th>Result</th><td class='%s'>%s</td></tr>%n",
-                res.getHit() ? "hit" : "miss", res.getHit() ? "Hit" : "Miss");
-        out.printf("<tr><th>Time</th><td>%s</td></tr>%n", res.getTime());
-        out.printf("<tr><th>Working time</th><td>%d</td></tr>%n", res.getWorkTime());
-        out.println("</table>");
-        out.println("<a class='back-link' href='controller'>← Back to form</a>");
-        out.println("</div></body></html>");
     }
 }

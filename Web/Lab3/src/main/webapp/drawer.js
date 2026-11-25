@@ -14,6 +14,7 @@ export function drawPicture(width, height, centerX, centerY, arrowLength, ctx, r
 }
 
 function figuresPath(ctx, centerX, centerY, r) {
+    // rectangel
     ctx.beginPath();
     ctx.rect(centerX - r / 2, centerY - r, r / 2, r);
 
