@@ -1,12 +1,12 @@
 package org.shaydi;
 
+import jakarta.inject.Inject;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -18,6 +18,9 @@ public class AreaCheckServlet extends HttpServlet {
 
     private static final List<Double> rOkay = List.of(1.0, 2.0, 3.0, 4.0, 5.0);
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+
+    @Inject
+    ResultBean resultBean;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -49,13 +52,7 @@ public class AreaCheckServlet extends HttpServlet {
         String time = LocalDateTime.now().format(FMT);
         Result result = new Result(x,y,r,hit, time, workTime);
 
-        HttpSession session = req.getSession();
-        ResultBean bean = (ResultBean) session.getAttribute("resultBean");
-        if (bean == null) {
-            bean = new ResultBean();
-            session.setAttribute("resultBean", bean);
-        }
-        bean.addResult(result);
+        resultBean.addResult(result);
 
         req.setAttribute("result", result);
         req.getRequestDispatcher("/WEB-INF/result.jsp").forward(req, resp);

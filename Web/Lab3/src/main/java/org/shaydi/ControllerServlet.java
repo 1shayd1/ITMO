@@ -1,5 +1,6 @@
 package org.shaydi;
 
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,11 +12,13 @@ import java.io.IOException;
 @WebServlet("/controller")
 public class ControllerServlet extends HttpServlet {
 
+    @Inject
+    ResultBean resultBean;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if ("true".equals(req.getParameter("clear"))) {
-            ResultBean bean = (ResultBean) req.getSession().getAttribute("resultBean");
-            if (bean != null) bean.clear();
+            resultBean.clear();
             req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
             return;
         }
