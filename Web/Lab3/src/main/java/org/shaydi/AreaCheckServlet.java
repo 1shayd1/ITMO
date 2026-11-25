@@ -20,7 +20,7 @@ public class AreaCheckServlet extends HttpServlet {
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     @Inject
-    ResultBean resultBean;
+    private ResultBean resultBean;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

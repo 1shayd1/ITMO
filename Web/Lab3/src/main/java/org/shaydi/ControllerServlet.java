@@ -13,7 +13,7 @@ import java.io.IOException;
 public class ControllerServlet extends HttpServlet {
 
     @Inject
-    ResultBean resultBean;
+    private ResultBean resultBean;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
