@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jdk.jshell.execution.LoaderDelegate;
 
 import java.io.IOException;
 
@@ -23,20 +24,14 @@ public class ControllerServlet extends HttpServlet {
             return;
         }
 
-        if (hasCoordinates(req)) {
+        if (hasAnyCoordinate(req)) {
             req.getRequestDispatcher("/areaCheck").forward(req, resp);
         } else {
             req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
         }
     }
 
-    private boolean hasCoordinates(HttpServletRequest request) {
-        return isPresent(request.getParameter("x")) &&
-                isPresent(request.getParameter("y")) &&
-                isPresent(request.getParameter("r"));
-    }
-
-    private boolean isPresent (String value) {
-        return (value != null) && (!value.isBlank());
+    private boolean hasAnyCoordinate(HttpServletRequest req) {
+        return req.getParameter("x") != null || req.getParameter("y") != null || req.getParameter("r") != null;
     }
 }

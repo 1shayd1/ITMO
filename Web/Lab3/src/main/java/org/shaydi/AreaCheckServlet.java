@@ -32,13 +32,21 @@ public class AreaCheckServlet extends HttpServlet {
             return;
         }
 
+        String xs = req.getParameter("x");
+        String ys = req.getParameter("y");
+        String rs = req.getParameter("r");
+        if (isBlank(xs) || isBlank(ys) || isBlank(rs)) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "x, y and r are required");
+            return;
+        }
+
         double x, y, r;
         try {
-            x = Double.parseDouble(req.getParameter("x").replace(',','.'));
-            y = Double.parseDouble(req.getParameter("y").replace(',','.'));
-            r = Double.parseDouble(req.getParameter("r").replace(',','.'));
+            x = Double.parseDouble(xs.replace(',', '.'));
+            y = Double.parseDouble(ys.replace(',', '.'));
+            r = Double.parseDouble(rs.replace(',', '.'));
         } catch (NumberFormatException e) {
-            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "x, y, and r must be doubles");
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "x, y and r must be numbers");
             return;
         }
 
@@ -71,5 +79,9 @@ public class AreaCheckServlet extends HttpServlet {
         return ((x*x + y*y <= r*r) && x >= 0 && y <=0) ||       // quater of circle
                 (x <= 0 && y >= 0 && x >= -r/2 && y <= r) ||    // rectangle
                 (x <= 0 && y <= 0 && y >= -x - r/2);            // triangle
+    }
+
+    private boolean isBlank(String s) {
+        return s == null || s.isBlank();
     }
 }
